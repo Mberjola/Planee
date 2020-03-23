@@ -20,7 +20,7 @@
         android:id="@+id/nav_settings"
         android:name="com.example.planeeandroid.ui.settings.SettingsFragment"
         android:label="@string/menu_settings"
-        tools:layout="@layout/fragment_gallery" >
+        tools:layout="@layout/fragment_settings" >
         <action
             android:id="@+id/action_nav_settings_to_nav_home"
             app:destination="@id/nav_home"
