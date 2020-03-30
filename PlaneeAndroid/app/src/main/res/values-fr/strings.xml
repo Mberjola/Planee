@@ -11,4 +11,6 @@
     <string name="nav_header_subtitle">Email</string>
     <string name="darkMod">Mode Sombre</string>
     <string name="PlusDesc">Ajout d\'un évènement</string>
+    <string name="connect">Connexion</string>
+    <string name="disconnect">Déconnexion</string>
 </resources>
