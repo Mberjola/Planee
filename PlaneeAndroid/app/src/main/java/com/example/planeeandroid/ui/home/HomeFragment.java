@@ -31,14 +31,14 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        text = root.findViewById(R.id.TextTest);
+      /*  text = root.findViewById(R.id.TextTest);
         bouton = root.findViewById(R.id.Button);
-        /*homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });*/
+        });
         flag = true;
         View.OnClickListener Texte = new View.OnClickListener() {
             @Override
@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
                 flag = !flag;
             }
         };
-        bouton.setOnClickListener(Texte);
+        bouton.setOnClickListener(Texte);*/
         return root;
     }
 }
