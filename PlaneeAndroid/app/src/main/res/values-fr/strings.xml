@@ -13,4 +13,5 @@
     <string name="PlusDesc">Ajout d\'un évènement</string>
     <string name="connect">Connexion</string>
     <string name="disconnect">Déconnexion</string>
+    <string name="Details">Suite</string>
 </resources>

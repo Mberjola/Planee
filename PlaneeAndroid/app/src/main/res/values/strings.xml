@@ -12,4 +12,5 @@
     <string name="PlusDesc">Add an event</string>
     <string name="connect">Connect</string>
     <string name="disconnect">Disconnect</string>
+    <string name="Details">More Details</string>
 </resources>
