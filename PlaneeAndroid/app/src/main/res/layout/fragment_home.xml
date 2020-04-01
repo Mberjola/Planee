@@ -46,7 +46,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -55,9 +54,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/card_style">
+                android:layout_height="300dp"
+                android:background="@drawable/ikki">
 
                 <TextView
                     android:id="@+id/Titre"
@@ -92,8 +90,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/card_style">
+                android:layout_height="300dp"
+                android:background="@drawable/ikki">
 
 
                 <TextView
@@ -129,8 +127,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/card_style">
+                android:layout_height="300dp"
+                android:background="@drawable/ikki">
 
 
                 <TextView
@@ -173,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="35dp"
         android:clickable="false"
         android:focusableInTouchMode="false"
         android:src="@drawable/plus_icon"
