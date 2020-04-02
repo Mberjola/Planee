@@ -14,4 +14,5 @@
     <string name="connect">Connexion</string>
     <string name="disconnect">Déconnexion</string>
     <string name="Details">Suite</string>
+    <string name="NameEvent">Nom de l\'évènement</string>
 </resources>
