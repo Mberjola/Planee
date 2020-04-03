@@ -14,4 +14,6 @@
     <string name="disconnect">Disconnect</string>
     <string name="Details">More Details</string>
     <string name="NameEvent">Name of the Event</string>
+    <string name="DateOfTheEvent">Date of the Event</string>
+    <string name="PickDate">Pick a Date</string>
 </resources>
