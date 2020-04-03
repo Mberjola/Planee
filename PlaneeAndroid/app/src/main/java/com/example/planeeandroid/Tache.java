@@ -6,9 +6,9 @@ import java.util.Date;
 public class Tache {
     private String nom;
     private String nomMagasin;
-    private URL SiteMagasin;
+    private String SiteMagasin;
 
-    public Tache(String nom, String nomMagasin, URL siteMagasin) {
+    public Tache(String nom, String nomMagasin, String siteMagasin) {
         this.nom = nom;
         this.nomMagasin = nomMagasin;
         this.SiteMagasin = siteMagasin;
@@ -30,11 +30,11 @@ public class Tache {
         this.nomMagasin = nomMagasin;
     }
 
-    public URL getSiteMagasin() {
+    public String getSiteMagasin() {
         return SiteMagasin;
     }
 
-    public void setSiteMagasin(URL siteMagasin) {
+    public void setSiteMagasin(String siteMagasin) {
         SiteMagasin = siteMagasin;
     }
 }
