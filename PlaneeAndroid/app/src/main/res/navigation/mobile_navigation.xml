@@ -14,6 +14,13 @@
             android:id="@+id/action_nav_home_to_nav_settings"
             app:destination="@id/nav_settings"
             app:popUpTo="@id/nav_settings" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_add"
+            app:destination="@id/nav_add"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
     </fragment>
 
@@ -25,6 +32,34 @@
         <action
             android:id="@+id/action_nav_settings_to_nav_home"
             app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_add"
+            app:destination="@id/nav_add"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.planeeandroid.ui.add.addFragment"
+        android:label="@string/PlusDesc"
+        tools:layout="@layout/fragment_add">
+
+        <action
+            android:id="@+id/action_nav_add_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_add_to_nav_settings"
+            app:destination="@id/nav_settings"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
