@@ -1,50 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/AddLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".ui.add.addFragment">
 
-    <TextView
-        android:id="@+id/NomEventTextView"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:labelFor="@id/NomEvent"
-        android:text="@string/NameEvent"
-        app:layout_constraintBottom_toBottomOf="@id/NomEvent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@id/NomEvent" />
+        android:layout_marginLeft="10dp">
 
-    <EditText
-        android:id="@+id/NomEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintLeft_toRightOf="@id/NomEventTextView"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/NomEventTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/NomEvent"
+            android:text="@string/NameEvent" />
 
-    <TextView
-        android:id="@+id/DateEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/DateOfTheEvent"
-        app:layout_constraintLeft_toLeftOf="@id/NomEventTextView"
-        app:layout_constraintTop_toBottomOf="@id/NomEventTextView" />
+        <EditText
+            android:id="@+id/NomEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/DatePick"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/PickDate"
-        app:layout_constraintBottom_toBottomOf="@id/DateEvent"
-        app:layout_constraintLeft_toLeftOf="@id/NomEvent"
-        app:layout_constraintRight_toRightOf="@id/NomEvent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/DateEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/DateOfTheEvent" />
+
+        <TextView
+            android:id="@+id/DatePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/PickDate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Task" />
+
+        <EditText
+            android:id="@+id/Tache1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/PickDate"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="@id/NomEventTextView"
+            app:layout_constraintTop_toBottomOf="@id/DatePick" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addButton" />
+
+</LinearLayout>

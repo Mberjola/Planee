@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +31,7 @@ public class addFragment extends Fragment {
     private com.example.planeeandroid.ui.add.addViewModel AddViewModel;
     private TextView myDisplayDate;
     private DatePickerDialog.OnDateSetListener myDateSetListener;
+    private Button AjoutEvent;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -44,6 +46,13 @@ public class addFragment extends Fragment {
                 //textView.setText(s);
             }
         });
+        AjoutEvent = root.findViewById(R.id.addEvent);
+        AjoutEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         myDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +60,7 @@ public class addFragment extends Fragment {
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog dialog = new DatePickerDialog(root.getContext(), android.R.style.Holo_ButtonBar_AlertDialog, myDateSetListener, year, month, day);
+                DatePickerDialog dialog = new DatePickerDialog(root.getContext(), android.R.style.Holo_Light_ButtonBar, myDateSetListener, year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
                 dialog.show();
             }

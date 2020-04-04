@@ -16,4 +16,6 @@
     <string name="NameEvent">Name of the Event</string>
     <string name="DateOfTheEvent">Date of the Event</string>
     <string name="PickDate">Pick a Date</string>
+    <string name="Task">Task</string>
+    <string name="addButton">Add the Event</string>
 </resources>
