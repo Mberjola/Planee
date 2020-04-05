@@ -35,11 +35,11 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         TextView Titre = (TextView) cellView.findViewById(R.id.Titre);
         Button suite = (Button) cellView.findViewById(R.id.suite);
         Evenement event = getItem(position);
-        Date dateLimite = event.getDateLimite();
+        String dateLimite = event.getDateLimite();
         TextView date = (TextView) cellView.findViewById(R.id.Date);
         String titre = event.getNom();
         Titre.setText(titre);
-        date.setText(dateLimite.toString());
+        date.setText(dateLimite);
         layout.setBackgroundResource(R.drawable.ikki);
         /*switch (titre) {
             case "Mariage":
