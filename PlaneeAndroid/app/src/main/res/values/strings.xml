@@ -18,4 +18,8 @@
     <string name="PickDate">Pick a Date</string>
     <string name="Task">Task</string>
     <string name="addButton">Add the Event</string>
+    <string name="NewTask">New Task</string>
+    <string name="TaskName">Task name</string>
+    <string name="TaskStore">Store</string>
+    <string name="TaskUrl">Store URL</string>
 </resources>

@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp">
 
         <TextView
             android:id="@+id/NomEventTextView"
@@ -27,13 +28,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp">
 
         <TextView
             android:id="@+id/DateEvent"
@@ -48,32 +51,25 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
-            android:text="@string/PickDate" />
+            android:text="@string/PickDate"
+            android:layout_marginStart="30dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/Taches"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Task" />
-
-        <EditText
-            android:id="@+id/Tache1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="@string/PickDate"
-            android:inputType="text"
-            app:layout_constraintLeft_toLeftOf="@id/NomEventTextView"
-            app:layout_constraintTop_toBottomOf="@id/DatePick" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/NewTache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NewTask" />
 
     <Button
         android:id="@+id/addEvent"

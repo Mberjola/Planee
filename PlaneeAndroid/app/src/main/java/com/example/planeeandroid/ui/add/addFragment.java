@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.ListFragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -33,6 +35,8 @@ import com.example.planeeandroid.R;
 import com.example.planeeandroid.Tache;
 import com.example.planeeandroid.ui.home.HomeFragment;
 import com.example.planeeandroid.ui.settings.SettingsViewModel;
+import com.example.planeeandroid.ui.task_list.TaskListFragment;
+import com.example.planeeandroid.ui.task_list.TaskListViewModel;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,7 +45,6 @@ public class addFragment extends Fragment {
     private com.example.planeeandroid.ui.add.addViewModel AddViewModel;
     private TextView myDisplayDate;
     private DatePickerDialog.OnDateSetListener myDateSetListener;
-    private Button AjoutEvent;
     private MyDBAdapter myDbAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -59,18 +62,30 @@ public class addFragment extends Fragment {
                 //textView.setText(s);
             }
         });
-        AjoutEvent = root.findViewById(R.id.addEvent);
-        AjoutEvent.setOnClickListener(new View.OnClickListener() {
+
+        Button ajoutEvent = root.findViewById(R.id.addEvent);
+        ajoutEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<Tache> taches = new ArrayList<Tache>();
-                EditText TacheName = root.findViewById(R.id.Tache1);
+                /*ArrayList<Tache> taches = new ArrayList<Tache>();
                 EditText EventName = root.findViewById(R.id.NomEvent);
-                taches.add(new Tache(TacheName.getText().toString(), "TESt", "Text2"));
+                taches.add(new Tache("TacheName.getText().toString()", "TESt", "Text2"));
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
                 myDbAdapter.InsertUnEvent(evenement);
-                Log.i("Insert", "Insert OK");
-
+                Log.i("Insert", "Insert OK");*/
+                EditText Name = (EditText) root.findViewById(R.id.Taskname);
+                Log.i("TestTask", Name.getText().toString());
+            }
+        });
+        Button ajoutTask = root.findViewById(R.id.NewTache);
+        ajoutTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                TaskListFragment tasklist = new TaskListFragment();
+                ft.add(R.id.Taches, tasklist);
+                ft.commit();
+                Log.i("Test", "Test bouton");
             }
         });
         //Boite de Dialogue du calendrier
