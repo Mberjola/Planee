@@ -73,6 +73,7 @@ public class addFragment extends Fragment {
 
             }
         });
+        //Boite de Dialogue du calendrier
         myDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
