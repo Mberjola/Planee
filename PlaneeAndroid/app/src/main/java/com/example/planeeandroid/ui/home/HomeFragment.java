@@ -53,12 +53,16 @@ public class HomeFragment extends Fragment {
         myDataBase = new MyDBAdapter(this.getContext());
         myDataBase.open();
         events = myDataBase.getAllEvent();
-        Evenement[] evenements = new Evenement[events.size()];
-        for (int i = 0; i < evenements.length; i++) {
-            evenements[i] = events.get(i);
+        if (events.size() == 0) {
+            textView.setText("Vous n'avez pas d'évènements, veuillez en ajouter");
+        } else {
+            Evenement[] evenements = new Evenement[events.size()];
+            for (int i = 0; i < evenements.length; i++) {
+                evenements[i] = events.get(i);
+            }
+            MyArrayAdapter myArray = new MyArrayAdapter(root.getContext(), evenements);
+            maListeView.setAdapter(myArray);
         }
-        MyArrayAdapter myArray = new MyArrayAdapter(root.getContext(), evenements);
-        maListeView.setAdapter(myArray);
         FloatingActionButton plus = root.findViewById(R.id.Plus);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override

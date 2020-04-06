@@ -14,10 +14,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
@@ -70,6 +70,7 @@ public class addFragment extends Fragment {
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
                 myDbAdapter.InsertUnEvent(evenement);
                 Log.i("Insert", "Insert OK");
+
             }
         });
         myDisplayDate.setOnClickListener(new View.OnClickListener() {

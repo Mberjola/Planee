@@ -64,6 +64,7 @@ public class MyDBAdapter {
             events.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches));
             c.moveToNext();
         }
+        c.close();
         return events;
     }
 
@@ -82,6 +83,7 @@ public class MyDBAdapter {
             c.moveToFirst();
             id = c.getLong(0);
         }
+        c.close();
         return id;
     }
 
@@ -97,6 +99,7 @@ public class MyDBAdapter {
                 c.moveToNext();
             }
         }
+        c.close();
         return event;
     }
 
