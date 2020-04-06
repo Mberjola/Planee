@@ -4,14 +4,28 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Evenement {
+    private long id;
     private String nom;
-    private Date dateLimite;
+    private String dateLimite;
     private ArrayList<Tache> Taches;
 
-    public Evenement(String nom, Date dateLimite, ArrayList<Tache> taches) {
+    public Evenement(long id, String nom, String dateLimite, ArrayList<Tache> taches) {
+        this.id = id;
         this.nom = nom;
         this.dateLimite = dateLimite;
         Taches = taches;
+    }
+
+    public Evenement() {
+
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public ArrayList<Tache> getTaches() {
@@ -30,11 +44,11 @@ public class Evenement {
         this.nom = nom;
     }
 
-    public Date getDateLimite() {
+    public String getDateLimite() {
         return dateLimite;
     }
 
-    public void setDateLimite(Date dateLimite) {
+    public void setDateLimite(String dateLimite) {
         this.dateLimite = dateLimite;
     }
 }

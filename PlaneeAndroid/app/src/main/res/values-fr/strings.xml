@@ -15,4 +15,8 @@
     <string name="disconnect">Déconnexion</string>
     <string name="Details">Suite</string>
     <string name="NameEvent">Nom de l\'évènement</string>
+    <string name="DateOfTheEvent">Date de l\'évènemenent</string>
+    <string name="PickDate">Choisissez une Date</string>
+    <string name="Task">Tâche</string>
+    <string name="addButton">Ajouter l\'évènement</string>
 </resources>
