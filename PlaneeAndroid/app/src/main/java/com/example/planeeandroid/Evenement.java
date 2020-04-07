@@ -16,6 +16,13 @@ public class Evenement {
         Taches = taches;
     }
 
+    public Evenement(String nom, String dateLimite, ArrayList<Tache> taches) {
+        this.id = 0;
+        this.nom = nom;
+        this.dateLimite = dateLimite;
+        Taches = taches;
+    }
+
     public Evenement() {
 
     }
