@@ -57,7 +57,10 @@ public class HomeFragment extends Fragment {
         if (events.size() == 0) {
             textView.setText("Vous n'avez pas d'évènements, veuillez en ajouter");
         } else {
-            Evenement[] evenements = (Evenement[]) events.toArray();
+            Evenement[] evenements = new Evenement[events.size()];
+            for (int i = 0; i < events.size(); i++) {
+                evenements[i] = events.get(i);
+            }
             MyArrayAdapter myArray = new MyArrayAdapter(root.getContext(), evenements);
             maListeView.setAdapter(myArray);
         }

@@ -11,6 +11,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/TasknameView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
@@ -30,9 +31,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="83dp"
             android:layout_marginRight="83dp"
-            android:text="@string/TaskStore"
-            android:layout_marginEnd="83dp" />
+            android:text="@string/TaskStore" />
 
         <EditText
             android:id="@+id/TaskMagasin"

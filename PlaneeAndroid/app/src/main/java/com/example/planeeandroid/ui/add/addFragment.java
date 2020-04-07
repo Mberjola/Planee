@@ -1,10 +1,8 @@
 package com.example.planeeandroid.ui.add;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,25 +16,18 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.fragment.app.ListFragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.planeeandroid.Evenement;
-import com.example.planeeandroid.MainActivity;
 import com.example.planeeandroid.MyDBAdapter;
 import com.example.planeeandroid.R;
 import com.example.planeeandroid.Tache;
 import com.example.planeeandroid.ui.home.HomeFragment;
-import com.example.planeeandroid.ui.settings.SettingsViewModel;
-import com.example.planeeandroid.ui.task_list.TaskListFragment;
-import com.example.planeeandroid.ui.task_list.TaskListViewModel;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -46,12 +37,18 @@ public class addFragment extends Fragment {
     private TextView myDisplayDate;
     private DatePickerDialog.OnDateSetListener myDateSetListener;
     private MyDBAdapter myDbAdapter;
+    private int counter;
+    private LinearLayout TaskLayout;
+    private LinearLayout Taches;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        final LayoutInflater myInflater = inflater;
+        final ViewGroup myContainer = container;
         AddViewModel =
                 ViewModelProviders.of(this).get(addViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_add, container, false);
+        counter = 0;
         myDbAdapter = new MyDBAdapter(this.getContext());
         myDbAdapter.open();
         myDisplayDate = root.findViewById(R.id.DatePick);
@@ -67,25 +64,39 @@ public class addFragment extends Fragment {
         ajoutEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*ArrayList<Tache> taches = new ArrayList<Tache>();
-                EditText EventName = root.findViewById(R.id.NomEvent);
+                ArrayList<Tache> taches = new ArrayList<Tache>();
+                for (int i = 0; i <= counter; i++) {
+                }
+                counter = 0;
+               /* EditText EventName = root.findViewById(R.id.NomEvent);
                 taches.add(new Tache("TacheName.getText().toString()", "TESt", "Text2"));
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
                 myDbAdapter.InsertUnEvent(evenement);
                 Log.i("Insert", "Insert OK");*/
-                EditText Name = (EditText) root.findViewById(R.id.Taskname);
-                Log.i("TestTask", Name.getText().toString());
             }
         });
         Button ajoutTask = root.findViewById(R.id.NewTache);
+
+        Taches = root.findViewById(R.id.Taches);
         ajoutTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                TaskListFragment tasklist = new TaskListFragment();
-                ft.add(R.id.Taches, tasklist);
-                ft.commit();
-                Log.i("Test", "Test bouton");
+               /* final View TaskRoot = myInflater.inflate(R.layout.task_layout, myContainer, false);
+                TaskLayout = TaskRoot.findViewById(R.id.TacheLayout);*/
+                LinearLayout lin = new LinearLayout(getContext());
+                lin.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                lin.setOrientation(LinearLayout.VERTICAL);
+                //TaskName
+                LinearLayout linearTaskName = new LinearLayout(getContext());
+                linearTaskName.setOrientation(LinearLayout.HORIZONTAL);
+                linearTaskName.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                TextView taskName = new TextView(getContext());
+                taskName.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+                taskName.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+                taskName.setText(R.string.TaskName);
+                counter += 1;
+                Taches.addView(lin);
+                // Log.i("Test", taskName.getText().toString());
             }
         });
         //Boite de Dialogue du calendrier
