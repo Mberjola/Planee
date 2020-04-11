@@ -23,4 +23,5 @@
     <string name="TaskName">Nom de la Tâche</string>
     <string name="TaskStore">Magasin</string>
     <string name="TaskUrl">URL du Magasin</string>
+    <string name="add">Ajouter</string>
 </resources>

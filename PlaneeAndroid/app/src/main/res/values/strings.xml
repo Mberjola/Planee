@@ -22,4 +22,5 @@
     <string name="TaskName">Task name</string>
     <string name="TaskStore">Store</string>
     <string name="TaskUrl">Store URL</string>
+    <string name="add">Add</string>
 </resources>

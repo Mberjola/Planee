@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,7 +42,7 @@ public class addFragment extends Fragment {
     private int counterMagasin;
     private int counterUrl;
     private LinearLayout TaskLayout;
-    private LinearLayout Taches;
+    private LinearLayout TachesList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
@@ -89,6 +92,9 @@ public class addFragment extends Fragment {
                         TacheInput.setSiteMagasin("");
                     }
                     taches.add(TacheInput);
+                    Log.i("name", TacheInput.getNom());
+                    Log.i("Magasin", TacheInput.getNomMagasin());
+                    Log.i("URL", TacheInput.getSiteMagasin());
                 }
                 counter = 0;
                 counterName = 0;
@@ -97,30 +103,35 @@ public class addFragment extends Fragment {
                 EditText EventName = root.findViewById(R.id.NomEvent);
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
                 myDbAdapter.InsertUnEvent(evenement);
+                Toast.makeText(getActivity(), R.string.add, Toast.LENGTH_LONG).show();
                 Log.i("Insert", "Insert OK");
             }
         });
+        //Ajouter une tâche
         Button ajoutTask = root.findViewById(R.id.NewTache);
-
-        Taches = root.findViewById(R.id.Taches);
+        TachesList = root.findViewById(R.id.Taches);
         ajoutTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout lin = new LinearLayout(getActivity());
-                lin.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+                /*LinearLayout lin = new LinearLayout(getActivity());
+                lin.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT));
                 lin.setOrientation(LinearLayout.VERTICAL);
                 //TaskName
                 LinearLayout linearTaskName = new LinearLayout(getActivity());
                 linearTaskName.setOrientation(LinearLayout.HORIZONTAL);
-                linearTaskName.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+                linearTaskName.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
                 TextView taskName = new TextView(getActivity());
+                taskName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
                 taskName.setWidth(LayoutParams.WRAP_CONTENT);
                 taskName.setHeight(LayoutParams.WRAP_CONTENT);
+                taskName.setTextColor(Color.BLACK);
                 taskName.setText(R.string.TaskName);
+                Log.i("textView", "NOIR");
                 EditText editTaskName = new EditText(getActivity());
-                editTaskName.setWidth(LayoutParams.MATCH_PARENT);
-                editTaskName.setHeight(LayoutParams.MATCH_PARENT);
+                editTaskName.setWidth(LayoutParams.WRAP_CONTENT);
+                editTaskName.setHeight(LayoutParams.WRAP_CONTENT);
                 editTaskName.setHint(R.string.TaskName);
+                editTaskName.setEms(100);
                 editTaskName.setId(counterName);
                 counterName += 1;
                 linearTaskName.addView(taskName);
@@ -132,6 +143,7 @@ public class addFragment extends Fragment {
                 TextView taskMagasin = new TextView(getActivity());
                 taskMagasin.setWidth(LayoutParams.WRAP_CONTENT);
                 taskMagasin.setHeight(LayoutParams.WRAP_CONTENT);
+                taskMagasin.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
                 taskMagasin.setText(R.string.TaskStore);
                 EditText editTaskMagasin = new EditText(getActivity());
                 editTaskMagasin.setWidth(LayoutParams.WRAP_CONTENT);
@@ -147,6 +159,7 @@ public class addFragment extends Fragment {
                 TextView taskURL = new TextView(getActivity());
                 taskURL.setWidth(LayoutParams.WRAP_CONTENT);
                 taskURL.setHeight(LayoutParams.WRAP_CONTENT);
+                taskURL.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
                 taskURL.setText(R.string.TaskUrl);
                 EditText editTaskURL = new EditText(getActivity());
                 editTaskURL.setWidth(LayoutParams.WRAP_CONTENT);
@@ -159,8 +172,21 @@ public class addFragment extends Fragment {
                 lin.addView(linearTaskName);
                 lin.addView(linearTaskMagasin);
                 lin.addView(linearTaskURL);
-                Taches.addView(lin);
+                TachesList.addView(lin);
+                counter += 1;*/
+                final View Myroot = myInflater.inflate(R.layout.task_layout, myContainer, false);
+                LinearLayout TaskModel = Myroot.findViewById(R.id.TacheLayout);
+                EditText TaskName = Myroot.findViewById(R.id.Taskname);
+                TaskName.setId(counterName);
+                EditText TaskMagasin = Myroot.findViewById(R.id.TaskMagasin);
+                TaskMagasin.setId(counterMagasin);
+                EditText TaskURL = Myroot.findViewById(R.id.TaskURLMagasin);
+                TaskURL.setId(counterUrl);
+                counterName += 1;
+                counterMagasin += 1;
+                counterUrl += 1;
                 counter += 1;
+                TachesList.addView(TaskModel);
             }
         });
         //Boite de Dialogue du calendrier

@@ -50,7 +50,8 @@ public class MyDBAdapter {
         for (int i = 0; i < event.getTaches().size(); i++) {
 
             Log.i("Tache", "" + event.getTaches().get(i).getNom());
-            insertTache(event.getTaches().get(i), idEvent);
+            if (!(event.getTaches().get(i).getNom().equals("")))
+                insertTache(event.getTaches().get(i), idEvent);
         }
     }
 
