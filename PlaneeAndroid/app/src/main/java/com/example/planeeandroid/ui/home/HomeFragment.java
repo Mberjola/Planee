@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -57,7 +58,7 @@ public class HomeFragment extends Fragment {
             textView.setText("Vous n'avez pas d'évènements, veuillez en ajouter");
         } else {
             Evenement[] evenements = new Evenement[events.size()];
-            for (int i = 0; i < evenements.length; i++) {
+            for (int i = 0; i < events.size(); i++) {
                 evenements[i] = events.get(i);
             }
             MyArrayAdapter myArray = new MyArrayAdapter(root.getContext(), evenements);

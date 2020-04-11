@@ -14,6 +14,10 @@ public class Tache {
         this.SiteMagasin = siteMagasin;
     }
 
+    public Tache() {
+
+    }
+
     public String getNom() {
         return nom;
     }

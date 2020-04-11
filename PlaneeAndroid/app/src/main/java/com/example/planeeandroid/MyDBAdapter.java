@@ -50,7 +50,8 @@ public class MyDBAdapter {
         for (int i = 0; i < event.getTaches().size(); i++) {
 
             Log.i("Tache", "" + event.getTaches().get(i).getNom());
-            insertTache(event.getTaches().get(i), idEvent);
+            if (!(event.getTaches().get(i).getNom().equals("")))
+                insertTache(event.getTaches().get(i), idEvent);
         }
     }
 
@@ -76,14 +77,27 @@ public class MyDBAdapter {
     }
 
     public long getEventID(String name, String dateLimite) {
-        long id = 0;
+        long id = -1;
+        ArrayList<Evenement> evenements = new ArrayList<Evenement>();
         Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite},
-                col_Name + "='" + name + "' AND " + col_DateLimite + "='" + dateLimite + "'", null, null, null, null);
+                col_DateLimite + "='" + dateLimite + "'", null, null, null, null);
         if (c.getCount() > 0) {
             c.moveToFirst();
-            id = c.getLong(0);
+            while (!c.isAfterLast()) {
+                ArrayList<Tache> taches = getEventTache(c.getLong(0));
+                evenements.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches));
+                c.moveToNext();
+            }
+        } else {
+            Log.i("message d'erreur", "Rien trouver ID");
         }
-        c.close();
+        for (int i = 0; i < evenements.size(); i++) {
+            Evenement evenement = evenements.get(i);
+            if (evenement.getNom().equals(name)) {
+                id = evenement.getId();
+                Log.i("messageevenementgetId", "" + id);
+            }
+        }
         return id;
     }
 

@@ -19,4 +19,9 @@
     <string name="PickDate">Choisissez une Date</string>
     <string name="Task">Tâche</string>
     <string name="addButton">Ajouter l\'évènement</string>
+    <string name="NewTask">Nouvelle Tâche</string>
+    <string name="TaskName">Nom de la Tâche</string>
+    <string name="TaskStore">Magasin</string>
+    <string name="TaskUrl">URL du Magasin</string>
+    <string name="add">Ajouter</string>
 </resources>
