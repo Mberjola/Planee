@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -101,7 +102,7 @@ public class addFragment extends Fragment {
                     Log.i("name", TacheInput.getNom());
                     Log.i("Magasin", TacheInput.getNomMagasin());
                     Log.i("URL", TacheInput.getSiteMagasin());
-                    getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack("AddToHomePage").commit();
+                    getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack(null).commit();
                 }
                 counter = 0;
                 counterName = 0;
@@ -120,67 +121,6 @@ public class addFragment extends Fragment {
         ajoutTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*LinearLayout lin = new LinearLayout(getActivity());
-                lin.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT));
-                lin.setOrientation(LinearLayout.VERTICAL);
-                //TaskName
-                LinearLayout linearTaskName = new LinearLayout(getActivity());
-                linearTaskName.setOrientation(LinearLayout.HORIZONTAL);
-                linearTaskName.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-                TextView taskName = new TextView(getActivity());
-                taskName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-                taskName.setWidth(LayoutParams.WRAP_CONTENT);
-                taskName.setHeight(LayoutParams.WRAP_CONTENT);
-                taskName.setTextColor(Color.BLACK);
-                taskName.setText(R.string.TaskName);
-                Log.i("textView", "NOIR");
-                EditText editTaskName = new EditText(getActivity());
-                editTaskName.setWidth(LayoutParams.WRAP_CONTENT);
-                editTaskName.setHeight(LayoutParams.WRAP_CONTENT);
-                editTaskName.setHint(R.string.TaskName);
-                editTaskName.setEms(100);
-                editTaskName.setId(counterName);
-                counterName += 1;
-                linearTaskName.addView(taskName);
-                linearTaskName.addView(editTaskName);
-                //TaskMagasin
-                LinearLayout linearTaskMagasin = new LinearLayout(getActivity());
-                linearTaskMagasin.setOrientation(LinearLayout.HORIZONTAL);
-                linearTaskMagasin.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-                TextView taskMagasin = new TextView(getActivity());
-                taskMagasin.setWidth(LayoutParams.WRAP_CONTENT);
-                taskMagasin.setHeight(LayoutParams.WRAP_CONTENT);
-                taskMagasin.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-                taskMagasin.setText(R.string.TaskStore);
-                EditText editTaskMagasin = new EditText(getActivity());
-                editTaskMagasin.setWidth(LayoutParams.WRAP_CONTENT);
-                editTaskMagasin.setHeight(LayoutParams.WRAP_CONTENT);
-                editTaskMagasin.setId(counterMagasin);
-                counterMagasin += 1;
-                linearTaskMagasin.addView(taskMagasin);
-                linearTaskMagasin.addView(editTaskMagasin);
-                //TaskURL
-                LinearLayout linearTaskURL = new LinearLayout(getActivity());
-                linearTaskURL.setOrientation(LinearLayout.HORIZONTAL);
-                linearTaskURL.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-                TextView taskURL = new TextView(getActivity());
-                taskURL.setWidth(LayoutParams.WRAP_CONTENT);
-                taskURL.setHeight(LayoutParams.WRAP_CONTENT);
-                taskURL.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-                taskURL.setText(R.string.TaskUrl);
-                EditText editTaskURL = new EditText(getActivity());
-                editTaskURL.setWidth(LayoutParams.WRAP_CONTENT);
-                editTaskURL.setHeight(LayoutParams.WRAP_CONTENT);
-                editTaskURL.setId(counterUrl);
-                counterUrl += 1;
-                linearTaskURL.addView(taskURL);
-                linearTaskURL.addView(editTaskURL);
-                //add Layout
-                lin.addView(linearTaskName);
-                lin.addView(linearTaskMagasin);
-                lin.addView(linearTaskURL);
-                TachesList.addView(lin);
-                counter += 1;*/
                 final View Myroot = myInflater.inflate(R.layout.task_layout, myContainer, false);
                 LinearLayout TaskModel = Myroot.findViewById(R.id.TacheLayout);
                 EditText TaskName = Myroot.findViewById(R.id.Taskname);
@@ -216,9 +156,15 @@ public class addFragment extends Fragment {
                 String date = (dayOfMonth < 10 ? "0" + dayOfMonth : dayOfMonth) + "/" + (month < 10 ? "0" + month : month) + "/" + year;
                 myDisplayDate.setText(date);
             }
-        }
-
-        ;
+        };
+        // This callback will only be called when MyFragment is at least Started.
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack(null).commit();
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
         return root;
     }
 

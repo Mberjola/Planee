@@ -117,6 +117,11 @@ public class MyDBAdapter {
         return event;
     }
 
+    public void supprimerEvent(long id) {
+        supprimerTache(id);
+        myDataBase.delete(Event_Table, col_ID + "=" + id, null);
+    }
+
     public long insertTache(Tache tache, long idEvent) {
         ContentValues values = new ContentValues();
         values.put(col_Name, tache.getNom());
@@ -139,6 +144,10 @@ public class MyDBAdapter {
         }
         c.close();
         return taches;
+    }
+
+    public void supprimerTache(long idEvent) {
+        myDataBase.delete(Tache_Table, col_IDEvent + "=" + idEvent, null);
     }
 
     private class MyOpenHelper extends SQLiteOpenHelper {

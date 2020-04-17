@@ -1,46 +1,31 @@
 package com.example.planeeandroid.ui.home;
 
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.net.UrlQuerySanitizer;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.planeeandroid.Evenement;
-import com.example.planeeandroid.MainActivity;
 import com.example.planeeandroid.MyArrayAdapter;
 import com.example.planeeandroid.MyDBAdapter;
 import com.example.planeeandroid.R;
-import com.example.planeeandroid.Tache;
 import com.example.planeeandroid.ui.add.addFragment;
 import com.example.planeeandroid.ui.details.DetailFragment;
-import com.example.planeeandroid.ui.settings.SettingsFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class HomeFragment extends Fragment {
 
@@ -73,6 +58,38 @@ public class HomeFragment extends Fragment {
             final MyArrayAdapter myArray = new MyArrayAdapter(getActivity(), evenements);
             maListeView.setAdapter(myArray);
             maListeView.setClickable(true);
+            maListeView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    new AlertDialog.Builder(getContext())
+                            .setTitle(R.string.deleteTitle)
+                            .setMessage(R.string.deleteMessage)
+                            .setPositiveButton(R.string.positif, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Evenement event = (Evenement) maListeView.getItemAtPosition(position);
+                                    myDataBase.supprimerEvent(event.getId());
+                                    getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new HomeFragment()).addToBackStack(null).setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right).commit();
+                                    Toast.makeText(getActivity(), R.string.deleteOK, Toast.LENGTH_LONG).show();
+                                }
+                            })
+                            .setNegativeButton(R.string.negative, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(getActivity(), R.string.cancel, Toast.LENGTH_LONG).show();
+                                    //getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new HomeFragment()).addToBackStack(null).setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right).commit();
+                                }
+                            })
+                            .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                @Override
+                                public void onDismiss(DialogInterface dialogInterface) {
+                                    // getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new HomeFragment()).addToBackStack(null).setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right).commit();
+                                }
+                            })
+                            .show();
+                    return true;
+                }
+            });
             maListeView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -83,18 +100,20 @@ public class HomeFragment extends Fragment {
                     Save.putLong("EventId", event.getId());
                     DetFrag.setArguments(Save);
                     Log.i("Test Bouton List", "" + event.getId());
-                    getFragmentManager().beginTransaction().replace(R.id.HomeFragment, DetFrag).addToBackStack("HomeToDetailPage").commit();
+                    getFragmentManager().beginTransaction().replace(R.id.HomeFragment, DetFrag).addToBackStack(null).commit();
                 }
             });
+
         }
         FloatingActionButton plus = root.findViewById(R.id.Plus);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("click", "555555555555555555555555");
-                getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new addFragment()).addToBackStack("HomeToAddPage").commit();
+                getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new addFragment()).addToBackStack(null).commit();
             }
         });
+
         return root;
     }
 
@@ -103,4 +122,6 @@ public class HomeFragment extends Fragment {
         myDataBase.close();
         super.onDestroy();
     }
+
+
 }
