@@ -24,4 +24,10 @@
     <string name="TaskStore">Magasin</string>
     <string name="TaskUrl">URL du Magasin</string>
     <string name="add">Ajouter</string>
+    <string name="deleteTitle">Suppression d\'un évènement</string>
+    <string name="deleteMessage">Voulez-vous Supprimer cet évènement?</string>
+    <string name="positif">Oui</string>
+    <string name="negative">Non</string>
+    <string name="cancel">Annulé</string>
+    <string name="deleteOK">Effacé</string>
 </resources>

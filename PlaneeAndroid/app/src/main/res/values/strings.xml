@@ -23,4 +23,10 @@
     <string name="TaskStore">Store</string>
     <string name="TaskUrl">Store URL</string>
     <string name="add">Add</string>
+    <string name="deleteTitle">Delete an event</string>
+    <string name="deleteMessage">Do you want to Delete it?</string>
+    <string name="positif">Yes</string>
+    <string name="negative">No</string>
+    <string name="cancel">Canceled</string>
+    <string name="deleteOK">"Delete "</string>
 </resources>
