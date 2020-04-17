@@ -21,6 +21,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -28,6 +30,7 @@ import com.example.planeeandroid.Evenement;
 import com.example.planeeandroid.MyDBAdapter;
 import com.example.planeeandroid.R;
 import com.example.planeeandroid.Tache;
+import com.example.planeeandroid.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -46,6 +49,9 @@ public class addFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
+        if (container != null) {
+            container.removeAllViews();
+        }
         final LayoutInflater myInflater = inflater;
         final ViewGroup myContainer = container;
         AddViewModel =
@@ -55,17 +61,17 @@ public class addFragment extends Fragment {
         counterName = 0;
         counterMagasin = 100;
         counterUrl = 200;
-        myDbAdapter = new MyDBAdapter(this.getContext());
+        myDbAdapter = new MyDBAdapter(getContext());
         myDbAdapter.open();
         myDisplayDate = root.findViewById(R.id.DatePick);
         //final TextView textView = root.findViewById(R.id.text_gallery);
-        AddViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        /*AddViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 //textView.setText(s);
             }
         });
-
+*/
         Button ajoutEvent = root.findViewById(R.id.addEvent);
         ajoutEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +101,7 @@ public class addFragment extends Fragment {
                     Log.i("name", TacheInput.getNom());
                     Log.i("Magasin", TacheInput.getNomMagasin());
                     Log.i("URL", TacheInput.getSiteMagasin());
+                    getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack("AddToHomePage").commit();
                 }
                 counter = 0;
                 counterName = 0;
@@ -103,7 +110,7 @@ public class addFragment extends Fragment {
                 EditText EventName = root.findViewById(R.id.NomEvent);
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
                 myDbAdapter.InsertUnEvent(evenement);
-                Toast.makeText(getActivity(), R.string.add, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.add, Toast.LENGTH_LONG).show();
                 Log.i("Insert", "Insert OK");
             }
         });

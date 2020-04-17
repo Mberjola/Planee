@@ -11,7 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.planeeandroid.ui.add.addFragment;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MyArrayAdapter extends ArrayAdapter<Evenement> {
@@ -21,6 +26,7 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         super(context, R.layout.cell_layout, evenements);
         this.context = context;
     }
+
 
     public View getView(int position, View convertView, ViewGroup parent) {
         // Gestion optimisée de la mémoire (réutilisation de cellules):
@@ -33,7 +39,7 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         // Remplissage de la cellule:
         ConstraintLayout layout = cellView.findViewById(R.id.constraintLayout);
         TextView Titre = (TextView) cellView.findViewById(R.id.Titre);
-        Button suite = (Button) cellView.findViewById(R.id.suite);
+       //Button suite = (Button) cellView.findViewById(R.id.suite);
         Evenement event = getItem(position);
         String dateLimite = event.getDateLimite();
         TextView date = (TextView) cellView.findViewById(R.id.Date);
