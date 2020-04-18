@@ -113,7 +113,34 @@ public class HomeFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.HomeFragment, new addFragment()).addToBackStack(null).commit();
             }
         });
-
+        // This callback will only be called when MyFragment is at least Started.
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                new AlertDialog.Builder(getContext())
+                        .setTitle(R.string.QuitTitle)
+                        .setMessage(R.string.QuitMessage)
+                        .setPositiveButton(R.string.positif, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                getActivity().finish();
+                            }
+                        })
+                        .setNegativeButton(R.string.negative, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getActivity(), R.string.cancel, Toast.LENGTH_LONG).show();
+                            }
+                        })
+                        .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                            @Override
+                            public void onDismiss(DialogInterface dialogInterface) {
+                            }
+                        })
+                        .show();
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
         return root;
     }
 

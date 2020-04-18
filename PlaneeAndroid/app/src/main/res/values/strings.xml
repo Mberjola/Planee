@@ -29,4 +29,7 @@
     <string name="negative">No</string>
     <string name="cancel">Canceled</string>
     <string name="deleteOK">"Delete "</string>
+    <string name="MissNameDate">Enter the name and the date of the event</string>
+    <string name="QuitTitle">Quit</string>
+    <string name="QuitMessage">Do you want to quit the app?</string>
 </resources>

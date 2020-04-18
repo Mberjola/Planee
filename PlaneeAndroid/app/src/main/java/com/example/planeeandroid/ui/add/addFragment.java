@@ -5,12 +5,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,11 +17,9 @@ import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
+
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.planeeandroid.Evenement;
@@ -77,42 +72,46 @@ public class addFragment extends Fragment {
         ajoutEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<Tache> taches = new ArrayList<Tache>();
-                for (int i = 0; i < counter; i++) {
-                    Tache TacheInput = new Tache();
-                    EditText textName = (EditText) root.findViewById(i);
-                    EditText textMagasin = (EditText) root.findViewById(100 + i);
-                    EditText textUrl = (EditText) root.findViewById(200 + i);
-                    if (!(textName == null)) {
-                        TacheInput.setNom(textName.getText().toString());
-                    } else {
-                        TacheInput.setNom("");
-                    }
-                    if (!(textMagasin == null)) {
-                        TacheInput.setNomMagasin(textMagasin.getText().toString());
-                    } else {
-                        TacheInput.setNomMagasin("");
-                    }
-                    if (!(textUrl == null)) {
-                        TacheInput.setSiteMagasin(textUrl.getText().toString());
-                    } else {
-                        TacheInput.setSiteMagasin("");
-                    }
-                    taches.add(TacheInput);
-                    Log.i("name", TacheInput.getNom());
-                    Log.i("Magasin", TacheInput.getNomMagasin());
-                    Log.i("URL", TacheInput.getSiteMagasin());
-                    getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack(null).commit();
-                }
-                counter = 0;
-                counterName = 0;
-                counterMagasin = 100;
-                counterUrl = 200;
                 EditText EventName = root.findViewById(R.id.NomEvent);
-                Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
-                myDbAdapter.InsertUnEvent(evenement);
-                Toast.makeText(getContext(), R.string.add, Toast.LENGTH_LONG).show();
-                Log.i("Insert", "Insert OK");
+                if ((!(EventName.getText().toString().equals(""))) && (!(myDisplayDate.getText().toString().equals(R.string.PickDate)))) {
+                    ArrayList<Tache> taches = new ArrayList<Tache>();
+                    for (int i = 0; i < counter; i++) {
+                        Tache TacheInput = new Tache();
+                        EditText textName = (EditText) root.findViewById(i);
+                        EditText textMagasin = (EditText) root.findViewById(100 + i);
+                        EditText textUrl = (EditText) root.findViewById(200 + i);
+                        if (!(textName == null)) {
+                            TacheInput.setNom(textName.getText().toString());
+                        } else {
+                            TacheInput.setNom("");
+                        }
+                        if (!(textMagasin == null)) {
+                            TacheInput.setNomMagasin(textMagasin.getText().toString());
+                        } else {
+                            TacheInput.setNomMagasin("");
+                        }
+                        if (!(textUrl == null)) {
+                            TacheInput.setSiteMagasin(textUrl.getText().toString());
+                        } else {
+                            TacheInput.setSiteMagasin("");
+                        }
+                        taches.add(TacheInput);
+                        Log.i("name", TacheInput.getNom());
+                        Log.i("Magasin", TacheInput.getNomMagasin());
+                        Log.i("URL", TacheInput.getSiteMagasin());
+                    }
+                    counter = 0;
+                    counterName = 0;
+                    counterMagasin = 100;
+                    counterUrl = 200;
+                    Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
+                    myDbAdapter.InsertUnEvent(evenement);
+                    Toast.makeText(getContext(), R.string.add, Toast.LENGTH_LONG).show();
+                    Log.i("Insert", "Insert OK");
+                    getFragmentManager().beginTransaction().replace(R.id.AddFragment, new HomeFragment()).addToBackStack(null).commit();
+                } else {
+                    Toast.makeText(getContext(), R.string.MissNameDate, Toast.LENGTH_LONG).show();
+                }
             }
         });
         //Ajouter une tâche
