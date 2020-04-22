@@ -1,22 +1,21 @@
 package com.example.planeeandroid;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.TextView;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
     private final Context context;
 
     public MyArrayDetailsAdapter(Context context, Tache[] Taches) {
-        super(context, R.layout.cell_taches_details, Taches);
+        super(context, R.layout.cell_layout, Taches);
         this.context = context;
     }
+
 
     public View getView(int position, View convertView, ViewGroup parent) {
         // Gestion optimisée de la mémoire (réutilisation de cellules):
@@ -31,9 +30,13 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
         TextView TaskStore = cellView.findViewById(R.id.Details_Task_Store);
         TextView TaskURL = cellView.findViewById(R.id.Details_Task_Url);
         Tache tache = getItem(position);
-        TaskName.setText(tache.getNom());
-        TaskStore.setText(tache.getNomMagasin());
-        TaskURL.setText(tache.getSiteMagasin());
+        //TaskName.setText(tache.getNom());
+        //TaskStore.setText(tache.getNomMagasin());
+        //TaskURL.setText(tache.getSiteMagasin());
+        Log.i("Position", "" + position);
+        Log.i("Tach5", tache.getNom());
+        Log.i("Tach6", tache.getNomMagasin());
+        Log.i("Tach7", tache.getSiteMagasin());
         return cellView;
     }
 }

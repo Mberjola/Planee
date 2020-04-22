@@ -138,7 +138,8 @@ public class MyDBAdapter {
         if (c.getCount() > 0) {
             c.moveToFirst();
             while (!c.isAfterLast()) {
-                taches.add(new Tache(c.getString(1), c.getString(2), c.getString(3)));
+                taches.add(new Tache((c.getString(1) == null ? "" : c.getString(1)), (c.getString(2) == null ? "" : c.getString(2)),
+                        (c.getString(3) == null ? "" : c.getString(3))));
                 c.moveToNext();
             }
         }
