@@ -26,7 +26,7 @@ public class MyDBAdapter {
     private static final String col_IDEvent = "id_event";
     private static final String col_Magasin = "magasin";
     private static final String col_URL = "url_magasin";
-    private static final String create_table_tache = String.format("create table %s(%s integer primary key autoincrement, %s text not null, %s text not null, %s text, %s integer, FOREIGN KEY (%s) REFERENCES %s(%s));", Tache_Table, col_ID, col_Name, col_Magasin, col_URL, col_IDEvent, col_IDEvent, Event_Table, col_ID);
+    private static final String create_table_tache = String.format("create table %s(%s integer primary key autoincrement, %s text , %s text , %s text, %s integer, FOREIGN KEY (%s) REFERENCES %s(%s));", Tache_Table, col_ID, col_Name, col_Magasin, col_URL, col_IDEvent, col_IDEvent, Event_Table, col_ID);
 
     private SQLiteDatabase myDataBase;
     private MyOpenHelper myOpenHelper;
@@ -138,7 +138,8 @@ public class MyDBAdapter {
         if (c.getCount() > 0) {
             c.moveToFirst();
             while (!c.isAfterLast()) {
-                taches.add(new Tache(c.getString(1), c.getString(2), c.getString(3)));
+                taches.add(new Tache((c.getString(1) == null ? "" : c.getString(1)), (c.getString(2) == null ? "" : c.getString(2)),
+                        (c.getString(3) == null ? "" : c.getString(3))));
                 c.moveToNext();
             }
         }

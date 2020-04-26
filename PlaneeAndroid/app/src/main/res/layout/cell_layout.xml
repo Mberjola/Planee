@@ -30,15 +30,5 @@
             app:layout_constraintRight_toRightOf="@id/Titre"
             app:layout_constraintTop_toBottomOf="@id/Titre" />
 
-       <!-- <Button
-            android:id="@+id/suite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/Details"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

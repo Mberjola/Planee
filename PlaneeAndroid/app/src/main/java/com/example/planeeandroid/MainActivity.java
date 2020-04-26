@@ -1,68 +1,121 @@
 package com.example.planeeandroid;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.planeeandroid.ui.add.addFragment;
-import com.example.planeeandroid.ui.home.HomeFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
+    private TextView text;
+    MyDBAdapter myDataBase;
+    private ArrayList<Evenement> events;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_settings, R.id.nav_add)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        setContentView(R.layout.fragment_home);
+        final Context context = this;
+        final TextView textView = findViewById(R.id.text_home);
+        final ListView maListeView = findViewById(R.id.List);
+        myDataBase = new MyDBAdapter(context);
+        myDataBase.open();
+        events = myDataBase.getAllEvent();
+        if (events.size() == 0) {
+            textView.setText("Vous n'avez pas d'évènements, veuillez en ajouter");
+        } else {
+            final Evenement[] evenements = new Evenement[events.size()];
+            for (int i = 0; i < events.size(); i++) {
+                evenements[i] = events.get(i);
+            }
+            final MyArrayAdapter myArray = new MyArrayAdapter(context, evenements);
+            maListeView.setAdapter(myArray);
+            maListeView.setClickable(true);
+            maListeView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    new AlertDialog.Builder(context)
+                            .setTitle(R.string.deleteTitle)
+                            .setMessage(R.string.deleteMessage)
+                            .setPositiveButton(R.string.positif, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Evenement event = (Evenement) maListeView.getItemAtPosition(position);
+                                    myDataBase.supprimerEvent(event.getId());
+                                    Toast.makeText(context, R.string.deleteOK, Toast.LENGTH_LONG).show();
+                                    Intent intentRecharge = new Intent(MainActivity.this, MainActivity.class);
+                                    startActivity(intentRecharge);
+                                    finish();
+                                }
+                            })
+                            .setNegativeButton(R.string.negative, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(context, R.string.cancel, Toast.LENGTH_LONG).show();
+                                }
+                            })
+                            .show();
+                    return true;
+                }
+            });
+            maListeView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Object o = maListeView.getItemAtPosition(position);
+                    Evenement event = (Evenement) o;
+                    Intent intentDetails = new Intent(MainActivity.this, DetailActivity.class);
+                    intentDetails.putExtra("EventId", event.getId());
+                    Log.i("Test Bouton List", "" + event.getId());
+                    startActivity(intentDetails);
+                    finish();
+                }
+            });
 
+        }
+        FloatingActionButton plus = findViewById(R.id.Plus);
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("click", "555555555555555555555555");
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
-    /*@Override
-     public boolean onCreateOptionsMenu(Menu menu) {
-         // Inflate the menu; this adds items to the action bar if it is present.
-         getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
-         return true;
-     }*/
-
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.QuitTitle)
+                .setMessage(R.string.QuitMessage)
+                .setPositiveButton(R.string.positif, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton(R.string.negative, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplication(), R.string.cancel, Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
     }
+
 }
