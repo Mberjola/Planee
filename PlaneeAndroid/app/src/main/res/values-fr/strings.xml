@@ -30,7 +30,9 @@
     <string name="negative">Non</string>
     <string name="cancel">Annulé</string>
     <string name="deleteOK">Effacé</string>
-    <string name="MissNameDate">Veuillez ajouter un nom et une date</string>
+    <string name="MissNameDate">Veuillez ajouter un nom, une date et une heure</string>
     <string name="QuitTitle">Quitter</string>
     <string name="QuitMessage">Voulez-vous quitter l\'application?</string>
+    <string name="TaskComplete">Tache completée</string>
+    <string name="NoTask">Vous n\'avez aucune tâches</string>
 </resources>
