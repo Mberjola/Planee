@@ -17,9 +17,10 @@ public class MyDBAdapter {
     public static final String col_ID = "id";
     public static final String col_Name = "Nom";
     public static final String col_DateLimite = "date_limite";
+    public static final String col_Heure = "heure";
 
     private static final String create_table_event =
-            String.format("create table %s(%s integer primary key autoincrement, %s text not null, %s text not null);", Event_Table, col_ID, col_Name, col_DateLimite);
+            String.format("create table %s(%s integer primary key autoincrement, %s text not null, %s text not null,%s text non null);", Event_Table, col_ID, col_Name, col_DateLimite, col_Heure);
 
 
     private static final String Tache_Table = "table_tache";
@@ -57,12 +58,12 @@ public class MyDBAdapter {
 
     public ArrayList<Evenement> getAllEvent() {
         ArrayList<Evenement> events = new ArrayList<Evenement>();
-        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite},
+        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite, col_Heure},
                 null, null, null, null, null);
         c.moveToFirst();
         while (!c.isAfterLast()) {
             ArrayList<Tache> taches = getEventTache(c.getLong(0));
-            events.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches));
+            events.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches, c.getString(3)));
             c.moveToNext();
         }
         c.close();
@@ -73,19 +74,20 @@ public class MyDBAdapter {
         ContentValues values = new ContentValues();
         values.put(col_Name, event.getNom());
         values.put(col_DateLimite, event.getDateLimite());
+        values.put(col_Heure, event.getHeure());
         return myDataBase.insert(Event_Table, null, values);
     }
 
     public long getEventID(String name, String dateLimite) {
         long id = -1;
         ArrayList<Evenement> evenements = new ArrayList<Evenement>();
-        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite},
+        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite, col_Heure},
                 col_DateLimite + "='" + dateLimite + "'", null, null, null, null);
         if (c.getCount() > 0) {
             c.moveToFirst();
             while (!c.isAfterLast()) {
                 ArrayList<Tache> taches = getEventTache(c.getLong(0));
-                evenements.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches));
+                evenements.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches, c.getString(3)));
                 c.moveToNext();
             }
         } else {
@@ -103,13 +105,13 @@ public class MyDBAdapter {
 
     public Evenement getEvent(long id) {
         Evenement event = new Evenement();
-        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite},
+        Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite, col_Heure},
                 col_ID + "='" + id + "'", null, null, null, null);
         if (c.getCount() > 0) {
             c.moveToFirst();
             while (!c.isAfterLast()) {
                 ArrayList<Tache> taches = getEventTache(id);
-                event = new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches);
+                event = new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches, c.getString(3));
                 c.moveToNext();
             }
         }
@@ -138,7 +140,7 @@ public class MyDBAdapter {
         if (c.getCount() > 0) {
             c.moveToFirst();
             while (!c.isAfterLast()) {
-                taches.add(new Tache((c.getString(1) == null ? "" : c.getString(1)), (c.getString(2) == null ? "" : c.getString(2)),
+                taches.add(new Tache(c.getLong(0), (c.getString(1) == null ? "" : c.getString(1)), (c.getString(2) == null ? "" : c.getString(2)),
                         (c.getString(3) == null ? "" : c.getString(3))));
                 c.moveToNext();
             }
@@ -149,6 +151,10 @@ public class MyDBAdapter {
 
     public void supprimerTache(long idEvent) {
         myDataBase.delete(Tache_Table, col_IDEvent + "=" + idEvent, null);
+    }
+
+    public void supprimerTacheId(long id) {
+        myDataBase.delete(Tache_Table, col_ID + "=" + id, null);
     }
 
     private class MyOpenHelper extends SQLiteOpenHelper {

@@ -1,10 +1,15 @@
 package com.example.planeeandroid;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,8 +22,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 public class AddActivity extends AppCompatActivity {
     private TextView myDisplayDate;
@@ -35,6 +43,7 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_add);
         final Context context = this;
+        createNotificationChannel();
         counter = 0;
         counterName = 0;
         counterMagasin = 100;
@@ -47,7 +56,10 @@ public class AddActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText EventName = findViewById(R.id.NomEvent);
-                if ((!(EventName.getText().toString().equals(""))) && (!(myDisplayDate.getText().toString().equals(R.string.PickDate)))) {
+                EditText Heure = findViewById(R.id.TimeHeure);
+                TextView h = findViewById(R.id.h);
+                EditText Min = findViewById(R.id.TimeMin);
+                if ((!(EventName.getText().toString().equals(""))) && (!(myDisplayDate.getText().toString().equals(R.string.PickDate))) || (!(Heure.getText().toString().equals(""))) || (!(Min.getText().toString().equals("")))) {
                     ArrayList<Tache> taches = new ArrayList<Tache>();
                     for (int i = 0; i < counter; i++) {
                         Tache TacheInput = new Tache();
@@ -78,12 +90,20 @@ public class AddActivity extends AppCompatActivity {
                     counterName = 0;
                     counterMagasin = 100;
                     counterUrl = 200;
-                    Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches);
+                    Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches, Heure.getText().toString() + h.getText() + Min.getText().toString());
                     myDbAdapter.InsertUnEvent(evenement);
                     Toast.makeText(context, R.string.add, Toast.LENGTH_LONG).show();
                     Log.i("Insert", "Insert OK");
-                    Intent intent = new Intent(AddActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    Toast.makeText(AddActivity.this, "Reminder set", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddActivity.this, ReminderBroadcast.class);
+                    intent.putExtra("IdEvent", myDbAdapter.getEventID(evenement.getNom(), evenement.getDateLimite()));
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(AddActivity.this, 0, intent, 0);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    long timeAtButtonClick = System.currentTimeMillis();
+                    long tenSecondes = 1000 * 10;
+                    alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick + tenSecondes, pendingIntent);
+                    Intent Myintent = new Intent(AddActivity.this, MainActivity.class);
+                    startActivity(Myintent);
                     finish();
                 } else {
                     Toast.makeText(context, R.string.MissNameDate, Toast.LENGTH_LONG).show();
@@ -138,6 +158,18 @@ public class AddActivity extends AppCompatActivity {
         Intent intentToHome = new Intent(AddActivity.this, MainActivity.class);
         startActivity(intentToHome);
         finish();
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "LemubitReminderChannel";
+            String description = "Channel for Lemubit Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("notifyLemubit", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 
 }

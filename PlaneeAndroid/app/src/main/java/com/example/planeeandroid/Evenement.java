@@ -8,19 +8,22 @@ public class Evenement {
     private String nom;
     private String dateLimite;
     private ArrayList<Tache> Taches;
+    private String heure;
 
-    public Evenement(long id, String nom, String dateLimite, ArrayList<Tache> taches) {
+    public Evenement(long id, String nom, String dateLimite, ArrayList<Tache> Taches, String heure) {
         this.id = id;
         this.nom = nom;
         this.dateLimite = dateLimite;
-        Taches = taches;
+        this.Taches = Taches;
+        this.heure = heure;
     }
 
-    public Evenement(String nom, String dateLimite, ArrayList<Tache> taches) {
+    public Evenement(String nom, String dateLimite, ArrayList<Tache> Taches, String heure) {
         this.id = 0;
         this.nom = nom;
         this.dateLimite = dateLimite;
-        Taches = taches;
+        Taches = Taches;
+        this.heure = heure;
     }
 
     public Evenement() {
@@ -57,5 +60,13 @@ public class Evenement {
 
     public void setDateLimite(String dateLimite) {
         this.dateLimite = dateLimite;
+    }
+
+    public String getHeure() {
+        return heure;
+    }
+
+    public void setHeure(String heure) {
+        this.heure = heure;
     }
 }

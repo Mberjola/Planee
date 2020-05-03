@@ -8,7 +8,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-
+\usepackage{ragged2e}
 \author{BERJOLA Matthias 37000961-ADOLPHE Benjamin 37001213}           %   
 
 
@@ -24,28 +24,27 @@
 \newpage
 
 \tableofcontents
-
-
-
-    
+  
 \chapter{Introduction}  
-
-
-
-
-
 \begin{flushleft}
-{\Large Cette année, afin de valider l'UE développement mobile, en plus des contrôles terminaux, nous devions réalisé un projet portant sur au choix une application ou un jeu.De ce fait mon collègue et moi même avons opté pour une application.Après un BrainStorming intensif nous avons décider d'appeler notre application Planee.}
+\justify
+\Large Cette année, afin de valider l'UE développement mobile 2, nous avons dû réaliser un projet. Ce projet consistait à réaliser une application ou un jeu respectant certaines contraintes:
+\begin{itemize}
+\item Le choix de l'application est laissé libre, mais une partie de la notation portera sur sa complexité (quelque chose de trop simpliste ne donnera pas lieu à beaucoup de points).
+\item L’application doit proposer : plusieurs écrans, une présentation
+sous forme de liste, une sauvegarde persistante.
+\item L’application doit fonctionner correctement sur tout type d’écran (grand, petit…), en mode portrait et paysage : ressources alternatives sous Android + contraintes sur les composants graphiques.
+\end{itemize}
+De ce fait mon collègue et moi même avons opté pour une application. Après un BrainStorming intensif, nous avons décider d'appeler notre application Planee et nous expliquerons son fonctionnement par la suite.
 \end{flushleft}
-
-
-
-
 
 \newpage
 \chapter{Description de l'application}
-
-
+\section{Principe}
+\begin{flushleft}
+\justify
+Planee est une application de gestion d'évènements. Elle permettra à l'utilisateur d'organiser et créer ses différents évènements. En effet, chaque évènement est composé d'un titre, d'une date limite de tâches et chaque tâche est composée d'un titre, d'un nom de magasin et éventuellement d'une URL indiquant le site du magasin si l'utilisateur a besoin de passer une commande. Sur le long terme l'application devrait supposer des magasins ou différents sites pour passer commande.
+\end{flushleft}
 \newpage
 \chapter{Architecture de l'application}
 
