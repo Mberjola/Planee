@@ -28,12 +28,6 @@ public class DetailActivity extends AppCompatActivity {
         final Long idEvent = intent.getLongExtra("EventId", 0);
         myDataBase.open();
         Evenement event = myDataBase.getEvent(idEvent);
-        TextView Name = findViewById(R.id.Details_Name_Event);
-        TextView Date = findViewById(R.id.Details_Date_Event);
-        TextView Heure = findViewById(R.id.Details_Time);
-        Name.setText(event.getNom());
-        Date.setText(event.getDateLimite());
-        Heure.setText(event.getHeure());
         Log.i("Evenement ID -----", "" + idEvent);
         final ListView maListView2 = findViewById(R.id.Details_Task_Liste);
         ArrayList<Tache> taches = event.getTaches();

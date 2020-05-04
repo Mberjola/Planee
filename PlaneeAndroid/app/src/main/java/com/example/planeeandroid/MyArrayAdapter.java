@@ -36,7 +36,7 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         String titre = event.getNom();
         Titre.setText(titre);
         date.setText(dateLimite);
-        layout.setBackgroundResource(R.drawable.ikki);
+      
         /*switch (titre) {
             case "Mariage":
                 imageView.setImageResource(R.drawable.prio0);
