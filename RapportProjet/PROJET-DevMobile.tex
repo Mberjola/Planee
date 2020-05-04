@@ -28,7 +28,7 @@
 \chapter{Introduction}  
 \begin{flushleft}
 \justify
-\Large Cette année, afin de valider l'UE développement mobile 2, nous avons dû réaliser un projet. Ce projet consistait à réaliser une application ou un jeu respectant certaines contraintes:
+Cette année, afin de valider l'UE développement mobile 2, nous avons dû réaliser un projet. Ce projet consistait à réaliser une application ou un jeu respectant certaines contraintes:
 \begin{itemize}
 \item Le choix de l'application est laissé libre, mais une partie de la notation portera sur sa complexité (quelque chose de trop simpliste ne donnera pas lieu à beaucoup de points).
 \item L’application doit proposer : plusieurs écrans, une présentation
@@ -39,17 +39,30 @@ De ce fait mon collègue et moi même avons opté pour une application. Après u
 \end{flushleft}
 
 \newpage
-\chapter{Description de l'application}
+\chapter{L'application Planee}
 \section{Principe}
 \begin{flushleft}
 \justify
 Planee est une application de gestion d'évènements. Elle permettra à l'utilisateur d'organiser et créer ses différents évènements. En effet, chaque évènement est composé d'un titre, d'une date limite de tâches et chaque tâche est composée d'un titre, d'un nom de magasin et éventuellement d'une URL indiquant le site du magasin si l'utilisateur a besoin de passer une commande. Sur le long terme l'application devrait supposer des magasins ou différents sites pour passer commande.
 \end{flushleft}
+\section{Architecture de l'application}
+\begin{flushleft}
+\justify
+L'application Planee est structurée en 3 Activités:
+\begin{itemize}
+\item L'activité MainActivity représente la page d'Accueil, elle contient l'ensemble des évènements entré par l'utilisateur.
+\item L'activité AddActivity représente la page d'ajout d'un évènement. La page contient un formulaire permettant d'entrer le nom, la date limite de l'évènement et l'ensemble des tâches. Le formulaire d'ajout de tâches est dynamique grâce au bouton "Nouvelle tâche".
+\item L'activité DetailActivity représente la page de détails d'un évènement.
+\end{itemize}
+\end{flushleft}
+\subsection{MainActivity}
+\subsection{AddActivity}
+\subsection{DetailsActivty}
+\section{Problèmes rencontrés}
+
 \newpage
-\chapter{Architecture de l'application}
-
-
+\chapter{Conclusion}
 \newpage
+\chapter{Bibliographie}
 
-\chapter{L'application Planee}
 \end{document}
