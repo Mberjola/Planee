@@ -4,8 +4,10 @@
 \contentsline {section}{\numberline {2.1}Principe}{3}%
 \contentsline {section}{\numberline {2.2}Architecture de l'application}{3}%
 \contentsline {subsection}{\numberline {2.2.1}MainActivity}{3}%
-\contentsline {subsection}{\numberline {2.2.2}AddActivity}{3}%
-\contentsline {subsection}{\numberline {2.2.3}DetailsActivty}{3}%
-\contentsline {section}{\numberline {2.3}Problèmes rencontrés}{3}%
-\contentsline {chapter}{\numberline {3}Conclusion}{4}%
-\contentsline {chapter}{\numberline {4}Bibliographie}{5}%
+\contentsline {subsection}{\numberline {2.2.2}AddActivity}{4}%
+\contentsline {subsection}{\numberline {2.2.3}DetailsActivty}{4}%
+\contentsline {section}{\numberline {2.3}Problèmes rencontrés}{4}%
+\contentsline {subsection}{\numberline {2.3.1}Fragments}{4}%
+\contentsline {subsection}{\numberline {2.3.2}Notifications}{4}%
+\contentsline {chapter}{\numberline {3}Conclusion}{5}%
+\contentsline {chapter}{\numberline {4}Bibliographie}{6}%

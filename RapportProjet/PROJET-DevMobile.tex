@@ -7,6 +7,9 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{ragged2e}
 \author{BERJOLA Matthias 37000961-ADOLPHE Benjamin 37001213}           %   
@@ -24,7 +27,7 @@
 \newpage
 
 \tableofcontents
-  
+
 \chapter{Introduction}  
 \begin{flushleft}
 \justify
@@ -35,7 +38,7 @@ Cette année, afin de valider l'UE développement mobile 2, nous avons dû réal
 sous forme de liste, une sauvegarde persistante.
 \item L’application doit fonctionner correctement sur tout type d’écran (grand, petit…), en mode portrait et paysage : ressources alternatives sous Android + contraintes sur les composants graphiques.
 \end{itemize}
-De ce fait mon collègue et moi même avons opté pour une application. Après un BrainStorming intensif, nous avons décider d'appeler notre application Planee et nous expliquerons son fonctionnement par la suite.
+De ce fait mon collègue et moi même avons opté pour une application. Après un BrainStorming intensif, nous avons décidé d'appeler notre application Planee et nous expliquerons son fonctionnement par la suite.
 \end{flushleft}
 
 \newpage
@@ -56,9 +59,27 @@ L'application Planee est structurée en 3 Activités:
 \end{itemize}
 \end{flushleft}
 \subsection{MainActivity}
+\begin{flushleft}
+\justify
+Comme dit précédemment la MainActivity représente la page d'accueil. En effet, la MainActivity est composée principalement d'un élément ListView. La ListView permettra de lister les différents évènements. Les évènements sont récupérés dans la Base de Données locale du téléphone, si aucun évènement est présent dans la Base de Donnée alors un message apparaîtra à l'écran.\\
+
+Quelques fonctionnalités de la page d'accueil:
+\begin{itemize}
+\item Appuie long sur un évènement pour le supprimer
+\item Appuie sur un évènement pour avoir les détails suivants:
+\begin{itemize}
+\item[•] Nom de l'évènement
+\item[•] Date de l'évènement
+\item[•] Liste des taches de l'évènement
+\end{itemize}
+\item Appuie sur le bouton retour pour quitter l'application
+\end{itemize}
+\end{flushleft}
 \subsection{AddActivity}
 \subsection{DetailsActivty}
 \section{Problèmes rencontrés}
+\subsection{Fragments}
+\subsection{Notifications}
 
 \newpage
 \chapter{Conclusion}
