@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/AddFragment"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -10,6 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,9 +19,10 @@
 
         <LinearLayout
             android:id="@+id/AddLayout"
+            android:background="@drawable/add_frag_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+
             android:orientation="vertical"
             tools:context=".ui.add.addFragment">
 
@@ -33,18 +36,33 @@
                 <TextView
                     android:id="@+id/NomEventTextView"
                     android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     android:labelFor="@id/NomEvent"
                     android:text="@string/NameEvent" />
 
                 <EditText
                     android:id="@+id/NomEvent"
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
                     android:autofillHints=""
                     android:ems="10"
+                    android:backgroundTint="@color/white"
                     android:inputType="text" />
             </LinearLayout>
 
@@ -56,6 +74,14 @@
 
                 <TextView
                     android:id="@+id/DateEvent"
+
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -63,6 +89,14 @@
 
                 <TextView
                     android:id="@+id/DatePick"
+
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
@@ -81,28 +115,60 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     android:text="Heure du début de l'évènement" />
 
                 <EditText
                     android:id="@+id/TimeHeure"
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:backgroundTint="@color/white"
                     android:autofillHints=""
                     android:ems="2" />
 
                 <TextView
                     android:id="@+id/h"
+
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="h" />
+                    android:text="H" />
 
                 <EditText
                     android:id="@+id/TimeMin"
+                    android:padding="5dp"
+                    android:shadowColor="#ffffff"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="5"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
+                    android:backgroundTint="@color/white"
                     android:ems="2" />
 
             </LinearLayout>
@@ -120,14 +186,18 @@
 
             <Button
                 android:id="@+id/NewTache"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_style"
                 android:text="@string/NewTask" />
 
             <Button
                 android:id="@+id/addEvent"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
+                android:layout_margin="5dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
                 android:text="@string/addButton" />
 
         </LinearLayout>

@@ -12,6 +12,13 @@
 
         <TextView
             android:id="@+id/TasknameView"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
@@ -19,6 +26,14 @@
 
         <EditText
             android:id="@+id/Taskname"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10" />
@@ -31,12 +46,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
             android:layout_marginEnd="83dp"
             android:layout_marginRight="83dp"
             android:text="@string/TaskStore" />
 
         <EditText
             android:id="@+id/TaskMagasin"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10" />
@@ -49,10 +79,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
             android:text="@string/TaskUrl" />
 
         <EditText
             android:id="@+id/TaskURLMagasin"
+            android:padding="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="34dp"
