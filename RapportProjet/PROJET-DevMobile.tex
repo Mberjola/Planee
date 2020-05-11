@@ -53,8 +53,8 @@ Planee est une application de gestion d'évènements. Elle permettra à l'utilis
 \justify
 L'application Planee est structurée en 3 Activités:
 \begin{itemize}
-\item L'activité MainActivity représente la page d'Accueil, elle contient l'ensemble des évènements entré par l'utilisateur.
-\item L'activité AddActivity représente la page d'ajout d'un évènement. La page contient un formulaire permettant d'entrer le nom, la date limite de l'évènement et l'ensemble des tâches. Le formulaire d'ajout de tâches est dynamique grâce au bouton "Nouvelle tâche".
+\item L'activité MainActivity représente la page d'Accueil.
+\item L'activité AddActivity représente la page d'ajout d'un évènement.
 \item L'activité DetailActivity représente la page de détails d'un évènement.
 \end{itemize}
 \end{flushleft}
@@ -76,11 +76,35 @@ Quelques fonctionnalités de la page d'accueil:
 \end{itemize}
 \end{flushleft}
 \subsection{AddActivity}
+\begin{flushleft}
+\justify
+La page contient un formulaire permettant d'entrer le nom, la date limite de l'évènement, l'heure et l'ensemble des tâches. Le formulaire d'ajout de tâches est dynamique grâce au bouton "Nouvelle tâche".\\
+
+Quelques fonctionnalités du formulaire:
+\begin{itemize}
+\item Appuie sur le bouton "Nouvelle tâche" afin d'ajouter un champs de saisie d'une nouvelle tâches, ces champs sont composées de 3 champs de saisie de textes:
+\begin{itemize}
+\item[•] Nom de la tâche
+\item[•] Potentiellement le nom du magasin
+\item[•] Potentiellement l'URL du site du magasin
+\end{itemize}
+\item Appuie sur le bouton "Ajout de l'évènement" afin d'ajouter l'évènement dans la base de données locale de l'appareil et déclencher une alarme à la date et l'heure entrées par l'utilisateur (Voir partie problèmes rencontrés)
+\end{itemize}
+\end{flushleft}
 \subsection{DetailsActivty}
+\begin{flushleft}
+\justify
+Comme dit dans la partie concernant la MainActivity, lors d'un appui sur un évènement on accède à la page de détails de cet évènement. Ainsi, on va récupérer tout les éléments dans la Base de données locale en rapport avec cet évènement.
+\end{flushleft}
+\subsection{Bases de données}
+\begin{flushleft}
+\justify
+Pour ce projet, nous avons utilisé une base de données composée de 2 tables
+\end{flushleft}
 \section{Problèmes rencontrés}
 \subsection{Fragments}
 \subsection{Notifications}
-
+\section{Amélioration futures}
 \newpage
 \chapter{Conclusion}
 \newpage
