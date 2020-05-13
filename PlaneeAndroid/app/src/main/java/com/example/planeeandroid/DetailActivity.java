@@ -2,6 +2,7 @@ package com.example.planeeandroid;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
     private MyDBAdapter myDataBase;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

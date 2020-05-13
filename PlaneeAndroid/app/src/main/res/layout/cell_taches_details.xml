@@ -25,114 +25,59 @@
             app:srcCompat="@drawable/card_detail_style" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="178dp"
-            android:layout_height="48dp"
-            android:padding="5dp"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0.0"
-            android:shadowDy="0.0"
-            android:shadowRadius="8"
-            android:text="@string/TaskName"
-            android:textColor="#ffffff"
-            android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.669"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.282" />
-
-        <TextView
             android:id="@+id/Details_Task_Name"
-            android:layout_width="185dp"
-            android:layout_height="47dp"
+            android:layout_width="324dp"
+            android:layout_height="81dp"
+            android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
             android:shadowRadius="8"
             android:textColor="#ffffff"
-            android:textSize="20dp"
+            android:textSize="35sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintHorizontal_bias="0.443"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.537" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="118dp"
-            android:layout_height="44dp"
-            android:padding="5dp"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0.0"
-            android:shadowDy="0.0"
-            android:shadowRadius="8"
-            android:text="@string/TaskStore"
-            android:textColor="#ffffff"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.528"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.785" />
+            app:layout_constraintVertical_bias="0.434" />
 
         <TextView
             android:id="@+id/Details_Task_Store"
-            android:layout_width="220dp"
-            android:layout_height="50dp"
+            android:layout_width="303dp"
+            android:layout_height="68dp"
+            android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
             android:shadowRadius="8"
             android:textColor="@color/mr_cast_meta_black_scrim"
-            android:textSize="30dp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.832"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.096" />
-
-        <TextView
-            android:layout_width="194dp"
-            android:layout_height="42dp"
-            android:padding="5dp"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0.0"
-            android:shadowDy="0.0"
-            android:shadowRadius="8"
-            android:text="@string/TaskUrl"
-            android:textColor="@color/mr_cast_meta_black_scrim"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.718"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.392" />
+            app:layout_constraintVertical_bias="0.097" />
 
         <TextView
             android:id="@+id/Details_Task_Url"
-            android:layout_width="121dp"
-            android:layout_height="39dp"
+            android:layout_width="305dp"
+            android:layout_height="60dp"
+            android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
             android:shadowRadius="8"
             android:textColor="@color/mr_cast_meta_black_scrim"
-            android:textSize="15dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.687" />
+            app:layout_constraintVertical_bias="0.547" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

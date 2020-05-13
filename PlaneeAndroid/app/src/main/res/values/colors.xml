@@ -4,4 +4,23 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#FFFFFF</color>
+    <color name="vert">#42f5a7</color>
+    <color name="mauve">#a142f5</color>
+    <color name="bleu">#427ef5</color>
+    <color name="jaune">#f5b642</color>
+    <color name="rose">#cc23b0</color>
+
+
+    <array name="rainbow">
+        <item>@color/vert</item>
+        <item>@color/mauve</item>
+        <item>@color/bleu</item>
+        <item>@color/jaune</item>
+        <item>@color/rose</item>
+
+    </array>
+
+
+
+
 </resources>

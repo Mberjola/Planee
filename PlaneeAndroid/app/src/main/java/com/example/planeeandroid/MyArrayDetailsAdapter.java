@@ -1,6 +1,8 @@
 package com.example.planeeandroid;
 
 import android.content.Context;
+
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
     private final Context context;
 
+
     public MyArrayDetailsAdapter(Context context, Tache[] Taches) {
         super(context, R.layout.cell_taches_details, Taches);
         this.context = context;
@@ -18,6 +21,7 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
 
 
     public View getView(int position, View convertView, ViewGroup parent) {
+
         // Gestion optimisée de la mémoire (réutilisation de cellules):
         View cellView = convertView;
         if (cellView == null) {

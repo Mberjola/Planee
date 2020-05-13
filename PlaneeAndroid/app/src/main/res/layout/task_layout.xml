@@ -26,6 +26,7 @@
 
         <EditText
             android:id="@+id/Taskname"
+            android:layout_marginLeft="18dp"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
@@ -59,17 +60,18 @@
 
         <EditText
             android:id="@+id/TaskMagasin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="10dp"
+            android:ems="10"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
             android:shadowRadius="5"
             android:textColor="#ffffff"
-            android:textSize="18dp"
-            android:backgroundTint="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10" />
+            android:textSize="18dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,17 +92,17 @@
 
         <EditText
             android:id="@+id/TaskURLMagasin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
             android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
             android:shadowRadius="5"
             android:textColor="#ffffff"
-            android:textSize="18dp"
-            android:backgroundTint="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="34dp"
-            android:ems="10" />
+            android:textSize="18dp" />
     </LinearLayout>
 </LinearLayout>
