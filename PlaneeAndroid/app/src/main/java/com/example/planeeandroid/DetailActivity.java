@@ -1,10 +1,7 @@
 package com.example.planeeandroid;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -30,20 +26,20 @@ public class DetailActivity extends AppCompatActivity {
         final Long idEvent = intent.getLongExtra("EventId", 0);
         myDataBase.open();
         Evenement event = myDataBase.getEvent(idEvent);
-        Log.i("Evenement ID -----", "" + idEvent);
         final ListView maListView2 = findViewById(R.id.Details_Task_Liste);
         ArrayList<Tache> taches = event.getTaches();
         if (taches.size() > 0) {
             final Tache[] TacheArray = new Tache[taches.size()];
+            int[] AleatColor = new int[taches.size()];
+            int answer = 0;
             for (int i = 0; i < TacheArray.length; i++) {
                 TacheArray[i] = taches.get(i);
-                Log.i("Tache1", TacheArray[i].getNom());
-                Log.i("Tache2", TacheArray[i].getNomMagasin());
-                Log.i("Tache3", TacheArray[i].getSiteMagasin());
+                do {
+                    answer = intAleat(0, 4);
+                } while (i >= 1 && AleatColor[i - 1] == answer);
+                AleatColor[i] = answer;
             }
-            Log.i("lengthTab", "" + TacheArray.length);
-            Log.i("listTab", "" + taches.size());
-            final MyArrayDetailsAdapter myArrayDetailsAdapter = new MyArrayDetailsAdapter(this, TacheArray);
+            final MyArrayDetailsAdapter myArrayDetailsAdapter = new MyArrayDetailsAdapter(this, TacheArray, AleatColor);
             maListView2.setAdapter(myArrayDetailsAdapter);
             maListView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -74,4 +70,11 @@ public class DetailActivity extends AppCompatActivity {
         super.onDestroy();
         myDataBase.close();
     }
+
+    public static int intAleat(int min, int max) {
+        int res = 0;
+        res = (int) (Math.random() * (max - min + 1) + min);
+        return res;
+    }
+
 }

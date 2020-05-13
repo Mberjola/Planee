@@ -9,6 +9,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{fullpage}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
@@ -75,6 +76,16 @@ Quelques fonctionnalités de la page d'accueil:
 \end{itemize}
 \item[•] Appuie sur le bouton retour pour quitter l'application
 \end{itemize}
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{HomeWEvents}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{HomeNoEvent}
+    \end{subfigure}
+    \caption{Page d'accueil avec et sans évènements}
+\end{figure}
 \end{flushleft}
 \subsection{AddActivity}
 \begin{flushleft}
@@ -91,7 +102,18 @@ Quelques fonctionnalités du formulaire:
 \end{itemize}
 \item[•] Appuie sur le bouton "Ajout de l'évènement" afin d'ajouter l'évènement dans la base de données locale de l'appareil et déclencher une alarme à la date et l'heure entrées par l'utilisateur (Voir partie problèmes rencontrés)
 \end{itemize}
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{FormWTask}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{FormNoTask}
+    \end{subfigure}
+    \caption{Page du formulaire d'ajout avec et sans tâches}
+\end{figure}
 \end{flushleft}
+\newpage
 \subsection{DetailsActivty}
 \begin{flushleft}
 \justify
@@ -103,7 +125,7 @@ Comme dit dans la partie concernant la MainActivity, lors d'un appui sur un év�
 Pour ce projet, nous avons utilisé une base de données composée de 2 tables:
 \begin{itemize}
 \item[•] Une table Event\_Table
-\item[•] Une table Tache \_Table
+\item[•] Une table Tache\_Table
 \end{itemize}
 \medskip
 La table Event\_Table sert à stocker les différents évènements créé. À l'intérieur on y trouve :
@@ -118,7 +140,8 @@ La table Tache\_Table sert quand à elle à stocker les différentes tâches à 
 \begin{itemize}
 \item[•] L' id de la tâche
 \item[•] Du nom du magasin dans lequel la tâche doit être effectué
-\item[•] De l'URL du magasin si l'achat peut être effectuer en ligne 
+\item[•] De l'URL du magasin si l'achat peut être effectuer en ligne
+\item[•] IdEvent qui est une clé étrangère permettant de savoir à quel évènement appartient la tâche
 \end{itemize}
 \medskip 
 On trouve également deux méthodes indispensables à la base de données :
@@ -127,17 +150,46 @@ On trouve également deux méthodes indispensables à la base de données :
 \item[•] La méthode getAllEvent
 \end{itemize}
 \medskip 
-La première méthode a été crée dans le but de pouvoir insérer chaque événements(composé de tâches) dans la base de données. La seconde méthode permet de récupérer tout les évènements crées par l'utilisateur afin de pouvoir les afficher de nouveau lorsque l'utilisateur reviens sur l'application après l'avoir fermé.
+La première méthode a été crée dans le but de pouvoir insérer chaque événements(composé de tâches) dans la base de données. La seconde méthode permet de récupérer tout les évènements crées par l'utilisateur afin de pouvoir les afficher de nouveau lorsque l'utilisateur reviens sur l'application après l'avoir fermé. \\
 Le choix d'une base données a été fait dans le but de garantir la persistance des données de l'utilisateur à chaque fois que l'application est quittée puis ré-ouverte.
 
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SchemaBDD}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{TableEvent}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{TableTache}
+    \end{subfigure}
+    \caption{Schéma de la Base de données}
+\end{figure}
 \end{flushleft}
 \section{Problèmes rencontrés}
+\begin{flushleft}
+\justify
+Au cours de ce projet, nous avons rencontré plusieurs problèmes. Nous allons donc citer dans ce rapports les différents problèmes que nous avons rencontré.
+\end{flushleft}
 \subsection{Fragments}
+\begin{flushleft}
+\justify
+Au début de ce projet, lors du choix de la première activité, nous avons choisi l'activité "Navigation Drawer Activity".\\
+\center
+\begin{minipage}{0.48\linewidth}
+\includegraphics[width=\linewidth]{Template}
+\captionof{figure}{Template}
+\end{minipage}
+\justify
+Cependant, ce template est basé sur l'utilisation des 
+Fragments qui est une notion pas vue en cours.
+\end{flushleft}
 \subsection{Notifications}
 \subsection{Layout}
 \begin{flushleft}
-Lors de la réalisation du design de l'application nous devions géré en plus des éléments de bases(couleurs formes etc) les layouts. Deux problèmes revenais souvent: La conservation de l'échelle lorsque l'on passe à un appareil plus petit et la superposition des éléments lors de ce passage.
-
+\justify
+Lors de la réalisation du design de l'application nous devions géré en plus des éléments de bases(couleurs formes etc) les layouts. Deux problèmes revenais souvent: La conservation de l'échelle lorsque l'on passe à un appareil plus petit et la superposition des éléments lors de ce passage.\\
 Au départ le design de l'application était réalisé entièrement avec des ConstraintLayout. Le problème avec les Constraint Layout est le manque de précision et de rigidité dans les contraintes que nous mettons. De ce fait des éléments qui semblait bien placés se retrouvait déplacés sans aucune intervention de notre part lorsque nous lançons l'application. Nous avons donc pris la décision de remplacer les Constraint Layout par des Relative Layout là où cela posait problème(page détail, page addDétail notamment). Après ce changement nous avons pu convenablement placé les différents éléments sans erreurs apparentes.
 \end{flushleft}
 \section{Amélioration futures}
@@ -145,5 +197,4 @@ Au départ le design de l'application était réalisé entièrement avec des Con
 \chapter{Conclusion}
 \newpage
 \chapter{Bibliographie}
-
 \end{document}

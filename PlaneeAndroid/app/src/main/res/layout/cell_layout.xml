@@ -12,7 +12,6 @@
         android:layout_height="300dp">
 
         <ImageView
-
             android:id="@+id/imageView"
             android:layout_width="366dp"
             android:layout_height="250dp"
@@ -20,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            app:srcCompat="@drawable/card_style" />
 
         <TextView
             android:id="@+id/Titre"
@@ -46,8 +45,8 @@
             android:layout_width="160dp"
             android:layout_height="55dp"
             android:layout_marginTop="4dp"
-            android:padding="5dp"
             android:gravity="center"
+            android:padding="5dp"
             android:shadowColor="#ffffff"
             android:shadowDx="0.0"
             android:shadowDy="0.0"
