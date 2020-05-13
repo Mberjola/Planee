@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -27,33 +28,39 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
             cellView = inflater.inflate(R.layout.cell_layout, parent, false);
         }
         // Remplissage de la cellule:
-        ConstraintLayout layout = cellView.findViewById(R.id.constraintLayout);
+        ImageView imageView = cellView.findViewById(R.id.imageView);
+        imageView.setImageResource(R.drawable.card_style);
         TextView Titre = (TextView) cellView.findViewById(R.id.Titre);
-        //Button suite = (Button) cellView.findViewById(R.id.suite);
         Evenement event = getItem(position);
         String dateLimite = event.getDateLimite();
         TextView date = (TextView) cellView.findViewById(R.id.Date);
         String titre = event.getNom();
         Titre.setText(titre);
         date.setText(dateLimite);
-      
-        /*switch (titre) {
-            case "Mariage":
-                imageView.setImageResource(R.drawable.prio0);
-                break;
-            case 1:
-                imageView.setImageResource(R.drawable.prio1);
-                break;
-            case 2:
-                imageView.setImageResource(R.drawable.prio2);
-                break;
-            case 3:
-                imageView.setImageResource(R.drawable.prio3);
-                break;
-            case 4:
-                imageView.setImageResource(R.drawable.prio4);
-                break;
-        }*/
+        int index;
+        if ((titre.contains("mariage")) || (titre.contains("Mariage"))
+                || (titre.contains("wedding")) || (titre.contains("Wedding"))) {
+            index = 0;
+        } else if ((titre.contains("Anniversaire")) || (titre.contains("anniversaire"))
+                || titre.contains("birthday") || titre.contains("Birthday")) {
+            index = 1;
+        } else if ((titre.contains("naissance")) || titre.contains("Naissance")
+                || (titre.contains("naissances")) || titre.contains("Naissances")
+                || (titre.contains("birth")) || titre.contains("Birth")
+                || (titre.contains("births")) || titre.contains("Births")) {
+            index = 2;
+        } else if ((titre.contains("baptême")) || (titre.contains("Baptême"))
+                || (titre.contains("bapteme")) || (titre.contains("Bapteme"))
+                || (titre.contains("baptêmes")) || (titre.contains("Baptêmes"))
+                || (titre.contains("baptemes")) || (titre.contains("Baptemes"))
+                || titre.contains("baptism") || titre.contains("Baptism")) {
+            index = 3;
+        } else {
+            index = 4;
+        }
+        int[] ColorArray = {R.color.rose, R.color.vert, R.color.bleu, R.color.jaune, R.color.mauve};
+        int couleur = context.getResources().getColor(ColorArray[index]);
+        imageView.setColorFilter(couleur);
         return cellView;
     }
 }
