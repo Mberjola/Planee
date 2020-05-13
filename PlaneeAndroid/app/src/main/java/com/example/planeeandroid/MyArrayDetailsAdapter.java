@@ -3,11 +3,13 @@ package com.example.planeeandroid;
 import android.content.Context;
 
 
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
@@ -40,6 +42,14 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
             TaskURL.setText(tache.getSiteMagasin());
         } catch (Exception e) {
         }
+        int[] couleur = {R.color.bleu, R.color.vert, R.color.mauve, R.color.jaune, R.color.rose};
+        int index = (position > couleur.length ? position - couleur.length : position);
+        ImageView carte= cellView.findViewById(R.id.imageView);
+        carte.setBackgroundResource(R.drawable.card_style);
+        GradientDrawable gd = (GradientDrawable) carte.getBackground().getCurrent();
+        
+
+
         Log.i("Position", "" + position);
         Log.i("Tach5", tache.getNom());
         Log.i("Tach6", tache.getNomMagasin());
