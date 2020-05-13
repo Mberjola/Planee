@@ -6,10 +6,14 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{tcolorbox}
 \usepackage{graphicx}
+\newtcolorbox{mybox}[1]{colback=blue!5!white,colframe=blue!60!black,fonttitle=\bfseries,title=#1}
 \author{ADOLPHE Benjamin - BERJOLA Matthias}
 \setbeamercovered{transparent} 
 \setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{headline}{}
 %\logo{} 
 %\institute{} 
 %\date{} 
@@ -21,12 +25,75 @@
 \titlepage
 \end{frame}
 
-\begin{frame}
-\tableofcontents
+\begin{frame}{Plan}
+\begin{itemize}
+\item[•] Introduction \pause
+\item[•] Description de l'application  \pause
+\item[•] Problèmes rencontrés  \pause
+\item[•]  Conclusion 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction}
+\section{Introduction}
+
+\begin{itemize}
+\onslide<1>{\item[•] Le contexte}
+\onslide<2>{\item[•] L'idée}
+\onslide<3>{\item[•] le plan d'action}
+
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}{Description de l'application}
+\section{Description de l'application}
+\begin{itemize}
+\item[•] Planee c'est quoi ? \pause
+\end{itemize}
+\begin{mybox}{Une application de gestion d'évènement complet}
+une application de gestion d'évènements de A à Z, allant de la commande des fleurs à la réservation de salles.
+	
+\end{mybox}
+\pause
+\begin{itemize}
+\item[•] Un projet innovant \pause
+\end{itemize}
+\begin{mybox}{Du jamais vu}
+Contrairement aux applications de gestions habituel on peut tout programmer depuis son téléphone 
+	
+\end{mybox}
+
+
 
 \end{frame}
 
+
+\begin{frame}{Architecture de l'application}
+\section{Architecture de l'application}
+
+
+\end{frame}
+
+
+\begin{frame}{Problèmes rencontrés}
+\section{Problèmes rencontrés}
+\begin{mybox}{Problèmes liés aux fragments}\pause
+\end{mybox}
+
+\begin{mybox}{Problèmes liés aux Layouts}\pause
+\end{mybox}
+
+\begin{mybox}{Problèmes liés aux Notifications}\pause
+\end{mybox}
+
+\end{frame}
+
+
+\begin{frame}{Conclusion}
+\section{Conclusion}
+
+
+\end{frame}
 \end{document}

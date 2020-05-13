@@ -1,1 +1,14 @@
 \babel@toc {french}{}
+\beamer@sectionintoc {1}{Introduction}{6}{0}{1}
+\beamer@sectionintoc {2}{Introduction}{7}{0}{2}
+\beamer@sectionintoc {3}{Introduction}{8}{0}{3}
+\beamer@sectionintoc {4}{Description de l'application}{9}{0}{4}
+\beamer@sectionintoc {5}{Description de l'application}{10}{0}{5}
+\beamer@sectionintoc {6}{Description de l'application}{11}{0}{6}
+\beamer@sectionintoc {7}{Description de l'application}{12}{0}{7}
+\beamer@sectionintoc {8}{Architecture de l'application}{13}{0}{8}
+\beamer@sectionintoc {9}{Problèmes rencontrés}{14}{0}{9}
+\beamer@sectionintoc {10}{Problèmes rencontrés}{15}{0}{10}
+\beamer@sectionintoc {11}{Problèmes rencontrés}{16}{0}{11}
+\beamer@sectionintoc {12}{Problèmes rencontrés}{17}{0}{12}
+\beamer@sectionintoc {13}{Conclusion}{18}{0}{13}
