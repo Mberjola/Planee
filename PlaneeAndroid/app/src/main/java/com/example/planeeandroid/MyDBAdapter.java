@@ -78,6 +78,18 @@ public class MyDBAdapter {
         return myDataBase.insert(Event_Table, null, values);
     }
 
+    public long UpdateEvent(Evenement event, long id) {
+        ContentValues cv = new ContentValues();
+        cv.put(col_Name, event.getNom());
+        cv.put(col_DateLimite, event.getDateLimite());
+        cv.put(col_Heure, event.getHeure());
+        ArrayList<Tache> Taches = event.getTaches();
+        for (int i = 0; i < Taches.size(); i++) {
+            updateTask(Taches.get(i), id);
+        }
+        return myDataBase.update(Event_Table, cv, col_ID + "=" + id, null);
+    }
+
     public long getEventID(String name, String dateLimite) {
         long id = -1;
         ArrayList<Evenement> evenements = new ArrayList<Evenement>();
@@ -90,14 +102,11 @@ public class MyDBAdapter {
                 evenements.add(new Evenement(c.getLong(0), c.getString(1), c.getString(2), taches, c.getString(3)));
                 c.moveToNext();
             }
-        } else {
-            Log.i("message d'erreur", "Rien trouver ID");
         }
         for (int i = 0; i < evenements.size(); i++) {
             Evenement evenement = evenements.get(i);
             if (evenement.getNom().equals(name)) {
                 id = evenement.getId();
-                Log.i("messageevenementgetId", "" + id);
             }
         }
         return id;
@@ -124,6 +133,7 @@ public class MyDBAdapter {
         myDataBase.delete(Event_Table, col_ID + "=" + id, null);
     }
 
+
     public long insertTache(Tache tache, long idEvent) {
         ContentValues values = new ContentValues();
         values.put(col_Name, tache.getNom());
@@ -131,6 +141,15 @@ public class MyDBAdapter {
         values.put(col_URL, tache.getSiteMagasin());
         values.put(col_IDEvent, idEvent);
         return myDataBase.insert(Tache_Table, null, values);
+    }
+
+    public long updateTask(Tache tache, Long IdEvent) {
+        ContentValues values = new ContentValues();
+        values.put(col_Name, tache.getNom());
+        values.put(col_Magasin, tache.getNomMagasin());
+        values.put(col_URL, tache.getSiteMagasin());
+        values.put(col_IDEvent, IdEvent);
+        return myDataBase.update(Tache_Table, values, col_ID + "=" + tache.getId(), null);
     }
 
     public ArrayList<Tache> getEventTache(long id) {

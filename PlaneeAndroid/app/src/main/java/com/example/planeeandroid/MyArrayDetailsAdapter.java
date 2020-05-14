@@ -13,13 +13,11 @@ import android.widget.TextView;
 
 public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
     private final Context context;
-    private int CountIndex;
     private int[] AleaColor;
 
     public MyArrayDetailsAdapter(Context context, Tache[] Taches, int[] AleaColor) {
         super(context, R.layout.cell_taches_details, Taches);
         this.context = context;
-        CountIndex = 0;
         this.AleaColor = AleaColor;
     }
 
@@ -52,7 +50,6 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
         Log.i("Tach5", tache.getNom());
         Log.i("Tach6", tache.getNomMagasin());
         Log.i("Tach7", tache.getSiteMagasin());
-        CountIndex = CountIndex + 1;
         return cellView;
     }
 }

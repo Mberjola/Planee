@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("click", "555555555555555555555555");
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
                 finish();

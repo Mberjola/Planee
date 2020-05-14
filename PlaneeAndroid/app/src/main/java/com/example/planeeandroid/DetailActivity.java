@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
@@ -22,7 +24,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_details);
         myDataBase = new MyDBAdapter(this);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         final Long idEvent = intent.getLongExtra("EventId", 0);
         myDataBase.open();
         Evenement event = myDataBase.getEvent(idEvent);
@@ -51,12 +53,23 @@ public class DetailActivity extends AppCompatActivity {
                     intentRecharge.putExtra("EventId", idEvent);
                     startActivity(intentRecharge);
                     finish();
+
                 }
             });
         } else {
             TextView NoTask = findViewById(R.id.NoTask);
             NoTask.setText(R.string.NoTask);
         }
+        FloatingActionButton plus = findViewById(R.id.Plus);
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentUpdate = new Intent(DetailActivity.this, UpdateActivity.class);
+                intentUpdate.putExtra("EventId", idEvent);
+                startActivity(intentUpdate);
+                finish();
+            }
+        });
     }
 
     public void onBackPressed() {

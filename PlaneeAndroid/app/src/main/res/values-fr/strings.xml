@@ -35,4 +35,5 @@
     <string name="QuitMessage">Voulez-vous quitter l\'application?</string>
     <string name="TaskComplete">Tache completée</string>
     <string name="NoTask">Vous n\'avez aucune tâches</string>
+    <string name="UpdateEvent">Enregistrer</string>
 </resources>
