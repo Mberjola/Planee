@@ -12,6 +12,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,9 +34,10 @@ public class UpdateActivity extends AppCompatActivity {
     private LinearLayout TachesList;
 
     private int counterOld = 0;
-    private int countOldTaskNameId = 0;
-    private int countOldTaskStoreId = 100;
-    private int countOldTaskURLId = 200;
+    private int countOldTaskNameId;
+    private int countOldTaskStoreId;
+    private int countOldTaskURLId;
+    private int[] TaskIds;
 
     private int counterNewTaskNameId;
     private int counterNewTaskStoreId;
@@ -92,6 +94,7 @@ public class UpdateActivity extends AppCompatActivity {
         countOldTaskNameId = 0;
         countOldTaskStoreId = 100;
         countOldTaskURLId = 200;
+        TaskIds = new int[taches.size()];
         for (int i = 0; i < taches.size(); i++) {
             View Myroot = getLayoutInflater().inflate(R.layout.task_layout, null);
             LinearLayout TaskModel = Myroot.findViewById(R.id.TacheLayout);
@@ -106,6 +109,7 @@ public class UpdateActivity extends AppCompatActivity {
             TaskURL.setText(tache.getSiteMagasin());
             TaskURL.setId(countOldTaskURLId);
             TachesList.addView(TaskModel);
+            TaskIds[i] = (int) tache.getId();
             countOldTaskNameId += 1;
             countOldTaskStoreId += 1;
             countOldTaskURLId += 1;
@@ -114,9 +118,9 @@ public class UpdateActivity extends AppCompatActivity {
         //Ajout de nouvelles tâches
         Button ajoutTask = findViewById(R.id.NewTache);
         TachesList = findViewById(R.id.Taches);
-        counterNewTaskNameId = 400;
-        counterNewTaskStoreId = 500;
-        counterNewTaskURLId = 600;
+        counterNewTaskNameId = 300;
+        counterNewTaskStoreId = 400;
+        counterNewTaskURLId = 500;
         counterNew = 0;
         ajoutTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,15 +168,37 @@ public class UpdateActivity extends AppCompatActivity {
                     } else {
                         TacheInput.setSiteMagasin("");
                     }
+                    TacheInput.setId(TaskIds[i]);
                     OldTaskUpdate.add(TacheInput);
                 }
-                counterOld = 0;
-                counterNewTaskNameId = 0;
-                counterNewTaskStoreId = 0;
-                counterNewTaskURLId = 0;
-                counterNew = 0;
+
                 Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), OldTaskUpdate, Heure.getText().toString() + Heure.getText().toString() + Minutes.getText().toString());
                 myDataBase.UpdateEvent(evenement, idEvent);
+
+                for (int i = 0; i < counterNew; i++) {
+                    Tache TacheInput2 = new Tache();
+                    EditText textName = (EditText) findViewById(300 + i);
+                    EditText textMagasin = (EditText) findViewById(400 + i);
+                    EditText textUrl = (EditText) findViewById(500 + i);
+                    if (!(textName == null)) {
+                        TacheInput2.setNom(textName.getText().toString());
+                    } else {
+                        TacheInput2.setNom("");
+                    }
+                    if (!(textMagasin == null)) {
+                        TacheInput2.setNomMagasin(textMagasin.getText().toString());
+                    } else {
+                        TacheInput2.setNomMagasin("");
+                    }
+                    if (!(textUrl == null)) {
+                        TacheInput2.setSiteMagasin(textUrl.getText().toString());
+                    } else {
+                        TacheInput2.setSiteMagasin("");
+                    }
+                    myDataBase.insertTache(TacheInput2, idEvent);
+                }
+
+                Toast.makeText(UpdateActivity.this, R.string.UpdateEvent, Toast.LENGTH_LONG).show();
                 Intent IntentToDetail = new Intent(UpdateActivity.this, DetailActivity.class);
                 IntentToDetail.putExtra("EventId", idEvent);
                 startActivity(IntentToDetail);

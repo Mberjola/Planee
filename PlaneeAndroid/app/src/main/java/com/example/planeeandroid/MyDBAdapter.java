@@ -78,7 +78,7 @@ public class MyDBAdapter {
         return myDataBase.insert(Event_Table, null, values);
     }
 
-    public long UpdateEvent(Evenement event, long id) {
+    public void UpdateEvent(Evenement event, long id) {
         ContentValues cv = new ContentValues();
         cv.put(col_Name, event.getNom());
         cv.put(col_DateLimite, event.getDateLimite());
@@ -87,7 +87,7 @@ public class MyDBAdapter {
         for (int i = 0; i < Taches.size(); i++) {
             updateTask(Taches.get(i), id);
         }
-        return myDataBase.update(Event_Table, cv, col_ID + "=" + id, null);
+        myDataBase.update(Event_Table, cv, col_ID + "=" + id, null);
     }
 
     public long getEventID(String name, String dateLimite) {
@@ -134,13 +134,13 @@ public class MyDBAdapter {
     }
 
 
-    public long insertTache(Tache tache, long idEvent) {
+    public void insertTache(Tache tache, long idEvent) {
         ContentValues values = new ContentValues();
         values.put(col_Name, tache.getNom());
         values.put(col_Magasin, tache.getNomMagasin());
         values.put(col_URL, tache.getSiteMagasin());
         values.put(col_IDEvent, idEvent);
-        return myDataBase.insert(Tache_Table, null, values);
+        myDataBase.insert(Tache_Table, null, values);
     }
 
     public long updateTask(Tache tache, Long IdEvent) {
