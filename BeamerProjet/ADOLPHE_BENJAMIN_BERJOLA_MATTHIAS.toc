@@ -10,5 +10,4 @@
 \beamer@sectionintoc {9}{Problèmes rencontrés}{14}{0}{9}
 \beamer@sectionintoc {10}{Problèmes rencontrés}{15}{0}{10}
 \beamer@sectionintoc {11}{Problèmes rencontrés}{16}{0}{11}
-\beamer@sectionintoc {12}{Problèmes rencontrés}{17}{0}{12}
-\beamer@sectionintoc {13}{Conclusion}{18}{0}{13}
+\beamer@sectionintoc {12}{Conclusion}{21}{0}{12}
