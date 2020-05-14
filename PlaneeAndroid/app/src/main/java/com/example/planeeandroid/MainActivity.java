@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         myDataBase.open();
         events = myDataBase.getAllEvent();
         if (events.size() == 0) {
-            textView.setText("Vous n'avez pas d'évènements, veuillez en ajouter");
+            textView.setText(R.string.NoEvents);
         } else {
             final Evenement[] evenements = new Evenement[events.size()];
             for (int i = 0; i < events.size(); i++) {

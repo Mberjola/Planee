@@ -35,4 +35,5 @@
     <string name="TaskComplete">Task complete</string>
     <string name="NoTask">No Task</string>
     <string name="UpdateEvent">Update</string>
+    <string name="NoEvents">No Events</string>
 </resources>

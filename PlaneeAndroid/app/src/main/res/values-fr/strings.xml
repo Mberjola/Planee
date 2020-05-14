@@ -36,4 +36,5 @@
     <string name="TaskComplete">Tache completée</string>
     <string name="NoTask">Vous n\'avez aucune tâches</string>
     <string name="UpdateEvent">Enregistrer</string>
+    <string name="NoEvents">Vous n\'avez pas d\'évènements, veuillez en ajouter</string>
 </resources>
