@@ -17,16 +17,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.4}Bases de données}{5}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}UpdateActivity}{6}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Problèmes rencontrés}{6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Fragments}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Notifications}{7}%
+\contentsline {subsection}{\numberline {2.3.2}Notifications}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Layout}{7}%
+\contentsline {subsection}{\numberline {2.3.3}Layout}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Amélioration futures}{7}%
+\contentsline {section}{\numberline {2.4}Amélioration futures}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion}{8}%
+\contentsline {chapter}{\numberline {3}Conclusion}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Bibliographie}{9}%
+\contentsline {chapter}{\numberline {4}Bibliographie}{11}%

@@ -14,6 +14,8 @@
 \usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{ragged2e}
+\usepackage{listings}
+
 \author{BERJOLA Matthias 37000961-ADOLPHE Benjamin 37001213}           %   
 
 
@@ -58,6 +60,7 @@ L'application Planee est structurée en 3 Activités:
 \item[•] L'activité MainActivity représente la page d'Accueil.
 \item[•] L'activité AddActivity représente la page d'ajout d'un évènement.
 \item[•] L'activité DetailActivity représente la page de détails d'un évènement.
+\item[•] L'activité UpdateActivity représente la page de modification d'un évènement.
 \end{itemize}
 \end{flushleft}
 \subsection{MainActivity}
@@ -118,6 +121,12 @@ Quelques fonctionnalités du formulaire:
 \begin{flushleft}
 \justify
 Comme dit dans la partie concernant la MainActivity, lors d'un appui sur un évènement on accède à la page de détails de cet évènement. Ainsi, on va récupérer tout les éléments dans la Base de données locale en rapport avec cet évènement.
+Quelques fonctionnalités de la page:
+\begin{itemize}
+\item[•] Affichage des différentes tâches de l'évènement courant
+\item[•] Appuie sur une tache afin de la supprimer (Tache complétée)
+\item[•] Appuie sur le bouton flottant afin de modifier l'évènement courant
+\end{itemize}
 \end{flushleft}
 \subsection{Bases de données}
 \begin{flushleft}
@@ -167,6 +176,11 @@ Le choix d'une base données a été fait dans le but de garantir la persistance
     \caption{Schéma de la Base de données}
 \end{figure}
 \end{flushleft}
+\subsection{UpdateActivity}
+\begin{flushleft}
+\justify
+Le layout présent dans UpdateActivity est le même que celui présent dans AddActivity. En effet, la seule différence entre ces deux activités est que l'un est fait pour mettre à jour un évènement l'autre pour ajouter. Ainsi, le formulaire de mise à jour sera pré-remplis par les informations de l'évènement voulu par l'utilisateur. \`A partir de ce formulaire, l'utilisateur pourra mettre à jour les données existantes mais aussi ajouter de nouvelles tâches.
+\end{flushleft}
 \section{Problèmes rencontrés}
 \begin{flushleft}
 \justify
@@ -183,7 +197,44 @@ Au début de ce projet, lors du choix de la première activité, nous avons choi
 \end{minipage}
 \justify
 Cependant, ce template est basé sur l'utilisation des 
-Fragments qui est une notion pas vue en cours.
+Fragments, une notion qui n'a pas été vue en cours. Ainsi nous avons suivi de nombreux tutoriaux concernant les Fragments. Voici une liste des différents problèmes rencontrés lors de l'utilisation de Fragment: 
+\begin{itemize}
+\item Dès lors que l'on a voulu changer de page, le premier problème est apparu. En effet, lors de l'utilisation du FragmentManager et des transitions afin de changer les Fragments ils avaient tendance à se superposer. 
+\center
+\begin{minipage}{0.48\linewidth}
+\includegraphics[width=\linewidth]{SupperPosFrag}
+\captionof{figure}{Template}
+\end{minipage}
+\justify
+\item Nous avons pu résoudre ce problème en vérifiant dans le conteneur si un fragment était présent et si c'était le cas on enlevait tout fragment du conteneur grâce au code suivant:
+\end{itemize}
+\begin{lstlisting}
+	if (container != null) {
+		container.removeAllViews();
+	}
+\end{lstlisting}
+\begin{itemize}
+\item Nous devions gérer l'appuie sur le bouton retour de l'utilisateur. En effet, lorsque l'utilisateur appuyait sur la touche retour il se retrouvait devant une interface blanche car nous vidions le conteneur à chaque fois. Ainsi dans chaque fragment nous avons du gérer de façon programmative l'appui sur le bouton retour sachant que la méthode "OnBackpressed" ne fonctionnait pas dans le cas de Fragments:
+\end{itemize}
+\begin{lstlisting}
+	// This callback will only be called when 
+	MyFragment is at least Started.
+        OnBackPressedCallback callback = 
+        new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                getFragmentManager().beginTransaction()
+                .replace(R.id.DetailsFragment, new HomeFragment())
+                .addToBackStack(null)
+                .commit();
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher()
+        .addCallback(this, callback);
+\end{lstlisting}
+\begin{itemize}
+\item Le problème le plus important que nous avons rencontré était le temps. En effet, se former sur les Fragments et tout ce qui touchait aux Fragments demandaient énormément de temps. Plus de temps nous passions à nous former moins de temps nous avions pour terminer l'application. Ainsi après 3 séances supplémentaires avec le responsable de cet UE et de nombreuse galères dans la programmation avec les Fragments, nous avons décidé de repasser dans un format classique en privilégiant les activités aux Fragments malgré l'économie d'énergie apporté par les Fragments en utilisant qu'une seule activité pour tout gérer.
+\end{itemize}
 \end{flushleft}
 \subsection{Notifications}
 \subsection{Layout}

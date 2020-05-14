@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.4.30)  12 MAY 2020 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.4.30)  14 MAY 2020 22:08
 entering extended mode
 **./PROJET-DevMobile.tex
 (PROJET-DevMobile.tex
@@ -554,35 +554,63 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip96
 \JustifyingParindent=\skip97
 )
+("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
+\lst@mode=\count396
+\lst@gtempboxa=\box48
+\lst@token=\toks26
+\lst@length=\count397
+\lst@currlwidth=\dimen175
+\lst@column=\count398
+\lst@pos=\count399
+\lst@lostspace=\dimen176
+\lst@width=\dimen177
+\lst@newlines=\count400
+\lst@lineno=\count401
+\lst@maxwidth=\dimen178
+
+("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count402
+\lst@skipnumbers=\count403
+\lst@framebox=\box49
+)
+("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count396
-\@quotereset=\count397
+\@quotelevel=\count404
+\@quotereset=\count405
 
 ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count398
-\l__pdf_internal_box=\box48
+\l__kernel_color_stack_int=\count406
+\l__pdf_internal_box=\box50
 ) (PROJET-DevMobile.aux)
 \openout1 = `PROJET-DevMobile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
 
@@ -598,26 +626,26 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'PROJET-DevMobile.bbl' found.
  (PROJET-DevMobile.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
-LaTeX Info: Redefining \degres on input line 21.
-LaTeX Info: Redefining \dots on input line 21.
-LaTeX Info: Redefining \up on input line 21.
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
+LaTeX Info: Redefining \degres on input line 23.
+LaTeX Info: Redefining \dots on input line 23.
+LaTeX Info: Redefining \up on input line 23.
 
 ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count399
-\scratchdimen=\dimen175
-\scratchbox=\box49
-\nofMPsegments=\count400
-\nofMParguments=\count401
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count402
-\MPscratchDim=\dimen176
-\MPnumerator=\count403
-\makeMPintoPDFobject=\count404
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count407
+\scratchdimen=\dimen179
+\scratchbox=\box51
+\nofMPsegments=\count408
+\nofMParguments=\count409
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count410
+\MPscratchDim=\dimen180
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
+\everyMPtoPDFconversion=\toks28
 )
 ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -626,6 +654,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -663,21 +692,22 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Info: Redefining \selectfont on input line 23.
+\c@lstlisting=\count413
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
 
 
 ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
 ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/adolp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 31--31
+Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
 [][] 
  []
 
@@ -694,73 +724,78 @@ Chapitre 1.
 ]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 [3
 
 ]
-<HomeWEvents.jpg, id=23, 406.51875pt x 881.2925pt>
-File: HomeWEvents.jpg Graphic file (type jpg)
-<use HomeWEvents.jpg>
-Package pdftex.def Info: HomeWEvents.jpg  used on input line 82.
-(pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
-<HomeNoEvent.jpg, id=24, 406.51875pt x 881.2925pt>
+<HomeWEvents.png, id=23, 239.89626pt x 432.61626pt>
+File: HomeWEvents.png Graphic file (type png)
+<use HomeWEvents.png>
+Package pdftex.def Info: HomeWEvents.png  used on input line 85.
+(pdftex.def)             Requested size: 145.11053pt x 261.68413pt.
+<HomeNoEvent.jpg, id=25, 406.51875pt x 881.2925pt>
 File: HomeNoEvent.jpg Graphic file (type jpg)
 <use HomeNoEvent.jpg>
-Package pdftex.def Info: HomeNoEvent.jpg  used on input line 85.
+Package pdftex.def Info: HomeNoEvent.jpg  used on input line 88.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-<FormWTask.jpg, id=25, 222.8325pt x 481.8pt>
+<FormWTask.jpg, id=26, 222.8325pt x 481.8pt>
 File: FormWTask.jpg Graphic file (type jpg)
 <use FormWTask.jpg>
-Package pdftex.def Info: FormWTask.jpg  used on input line 108.
+Package pdftex.def Info: FormWTask.jpg  used on input line 111.
 (pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
-<FormNoTask.jpg, id=26, 281.05pt x 609.27625pt>
+<FormNoTask.jpg, id=27, 281.05pt x 609.27625pt>
 File: FormNoTask.jpg Graphic file (type jpg)
 <use FormNoTask.jpg>
-Package pdftex.def Info: FormNoTask.jpg  used on input line 111.
+Package pdftex.def Info: FormNoTask.jpg  used on input line 114.
 (pdftex.def)             Requested size: 145.11053pt x 314.57564pt.
-[4 <./HomeWEvents.jpg> <./HomeNoEvent.jpg>] [5 <./FormWTask.jpg> <./FormNoTask.
+[4 <./HomeWEvents.png> <./HomeNoEvent.jpg>] [5 <./FormWTask.jpg> <./FormNoTask.
 jpg>]
-<SchemaBDD.png, id=34, 322.20375pt x 203.76125pt>
+<SchemaBDD.png, id=36, 322.20375pt x 203.76125pt>
 File: SchemaBDD.png Graphic file (type png)
 <use SchemaBDD.png>
-Package pdftex.def Info: SchemaBDD.png  used on input line 159.
+Package pdftex.def Info: SchemaBDD.png  used on input line 168.
 (pdftex.def)             Requested size: 145.11053pt x 91.76944pt.
-<TableEvent.png, id=36, 275.0275pt x 175.65625pt>
+<TableEvent.png, id=37, 275.0275pt x 175.65625pt>
 File: TableEvent.png Graphic file (type png)
 <use TableEvent.png>
-Package pdftex.def Info: TableEvent.png  used on input line 162.
+Package pdftex.def Info: TableEvent.png  used on input line 171.
 (pdftex.def)             Requested size: 145.11053pt x 92.68192pt.
-<TableTache.png, id=37, 376.40625pt x 177.66376pt>
+<TableTache.png, id=38, 376.40625pt x 177.66376pt>
 File: TableTache.png Graphic file (type png)
 <use TableTache.png>
-Package pdftex.def Info: TableTache.png  used on input line 165.
+Package pdftex.def Info: TableTache.png  used on input line 174.
 (pdftex.def)             Requested size: 145.11053pt x 68.49428pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
-<Template.png, id=38, 370.38374pt x 281.05pt>
+<Template.png, id=39, 370.38374pt x 281.05pt>
 File: Template.png Graphic file (type png)
 <use Template.png>
-Package pdftex.def Info: Template.png  used on input line 181.
+Package pdftex.def Info: Template.png  used on input line 195.
 (pdftex.def)             Requested size: 232.17242pt x 176.17471pt.
-[6 <./SchemaBDD.png> <./TableEvent.png> <./TableTache.png> <./Template.png>]
-[7]
+[6 <./SchemaBDD.png> <./TableEvent.png> <./TableTache.png>]
+<SupperPosFrag.jpg, id=47, 948.54375pt x 1897.0875pt>
+File: SupperPosFrag.jpg Graphic file (type jpg)
+<use SupperPosFrag.jpg>
+Package pdftex.def Info: SupperPosFrag.jpg  used on input line 205.
+(pdftex.def)             Requested size: 215.25407pt x 430.50256pt.
+ [7 <./Template.png>] [8 <./SupperPosFrag.jpg>] [9]
 Chapitre 3.
-[8
+[10
 
 ]
 Chapitre 4.
-[9
+[11
 
 ] (PROJET-DevMobile.aux)
 Package logreq Info: Writing requests to 'PROJET-DevMobile.run.xml'.
@@ -768,13 +803,13 @@ Package logreq Info: Writing requests to 'PROJET-DevMobile.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13236 strings out of 480930
- 227219 string characters out of 2899761
- 864023 words of memory out of 3000000
- 28954 multiletter control sequences out of 15000+200000
+ 14841 strings out of 480930
+ 248505 string characters out of 2899761
+ 886696 words of memory out of 3000000
+ 30547 multiletter control sequences out of 15000+200000
  548312 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,42p,834b,1756s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,7n,42p,834b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 eccc1200.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecbx1440.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -787,9 +822,9 @@ ers\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.
 pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecrm1440.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
 /ec/dpi600\ecrm2074.pk>
-Output written on PROJET-DevMobile.pdf (10 pages, 226000 bytes).
+Output written on PROJET-DevMobile.pdf (12 pages, 387759 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
+ 353 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
