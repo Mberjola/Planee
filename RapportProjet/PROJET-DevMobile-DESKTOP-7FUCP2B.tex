@@ -14,8 +14,6 @@
 \usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{ragged2e}
-\usepackage{listings}
-
 \author{BERJOLA Matthias 37000961-ADOLPHE Benjamin 37001213}           %   
 
 
@@ -60,7 +58,6 @@ L'application Planee est structurée en 3 Activités:
 \item[•] L'activité MainActivity représente la page d'Accueil.
 \item[•] L'activité AddActivity représente la page d'ajout d'un évènement.
 \item[•] L'activité DetailActivity représente la page de détails d'un évènement.
-\item[•] L'activité UpdateActivity représente la page de modification d'un évènement.
 \end{itemize}
 \end{flushleft}
 \subsection{MainActivity}
@@ -82,10 +79,7 @@ Quelques fonctionnalités de la page d'accueil:
 \begin{figure}[!h]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{HomeWEvents1}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{HomeWEvents2}
+        \includegraphics[width=\textwidth]{HomeWEvents}
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=\textwidth]{HomeNoEvent}
@@ -124,42 +118,7 @@ Quelques fonctionnalités du formulaire:
 \begin{flushleft}
 \justify
 Comme dit dans la partie concernant la MainActivity, lors d'un appui sur un évènement on accède à la page de détails de cet évènement. Ainsi, on va récupérer tout les éléments dans la Base de données locale en rapport avec cet évènement.
-Quelques fonctionnalités de la page:
-\begin{itemize}
-\item[•] Appuie sur une tache afin de la supprimer (Tache complétée)
-\item[•] Appuie sur le bouton flottant afin de modifier l'évènement courant
-\end{itemize}
-\begin{figure}[!h]
-    \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Tasks}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{NoTask}
-    \end{subfigure}
-    \caption{Formulaire de mise à jour avec et sans modification(s)}
-\end{figure}
 \end{flushleft}
-\newpage
-\subsection{UpdateActivity}
-\begin{flushleft}
-\justify
-Le layout présent dans UpdateActivity est le même que celui présent dans AddActivity. En effet, la seule différence entre ces deux activités est que l'un est fait pour mettre à jour un évènement l'autre pour ajouter. Ainsi, le formulaire de mise à jour sera pré-remplis par les informations de l'évènement voulu par l'utilisateur. \`A partir de ce formulaire, l'utilisateur pourra mettre à jour les données existantes mais aussi ajouter de nouvelles tâches. 
-\begin{figure}[!h]
-    \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{FormUpdateNoModif}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{FormUpdateModif}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{FormUpdateModif}
-    \end{subfigure}
-    \caption{Formulaire de mise à jour avec et sans modification(s)}
-\end{figure}
-\end{flushleft}
-\newpage
 \subsection{Bases de données}
 \begin{flushleft}
 \justify
@@ -224,73 +183,9 @@ Au début de ce projet, lors du choix de la première activité, nous avons choi
 \end{minipage}
 \justify
 Cependant, ce template est basé sur l'utilisation des 
-Fragments, une notion qui n'a pas été vue en cours. Ainsi nous avons suivi de nombreux tutoriaux concernant les Fragments. Voici une liste des différents problèmes rencontrés lors de l'utilisation de Fragment: 
-\begin{itemize}
-\item Dès lors que l'on a voulu changer de page, le premier problème est apparu. En effet, lors de l'utilisation du FragmentManager et des transitions afin de changer les Fragments ils avaient tendance à se superposer. 
-\center
-\begin{minipage}{0.48\linewidth}
-\includegraphics[width=\linewidth]{SupperPosFrag}
-\captionof{figure}{Template}
-\end{minipage}
-\justify
-\item Nous avons pu résoudre ce problème en vérifiant dans le conteneur si un fragment était présent et si c'était le cas on enlevait tout fragment du conteneur grâce au code suivant:
-\end{itemize}
-\begin{lstlisting}
-	if (container != null) {
-		container.removeAllViews();
-	}
-\end{lstlisting}
-\begin{itemize}
-\item Nous devions gérer l'appuie sur le bouton retour de l'utilisateur. En effet, lorsque l'utilisateur appuyait sur la touche retour il se retrouvait devant une interface blanche car nous vidions le conteneur à chaque fois. Ainsi dans chaque fragment nous avons du gérer de façon programmative l'appui sur le bouton retour sachant que la méthode "OnBackpressed" ne fonctionnait pas dans le cas de Fragments:
-\end{itemize}
-\begin{lstlisting}
-	// This callback will only be called when 
-	MyFragment is at least Started.
-        OnBackPressedCallback callback = 
-        new OnBackPressedCallback(true /* enabled by default */) {
-            @Override
-            public void handleOnBackPressed() {
-                getFragmentManager().beginTransaction()
-                .replace(R.id.DetailsFragment, new HomeFragment())
-                .addToBackStack(null)
-                .commit();
-            }
-        };
-        requireActivity().getOnBackPressedDispatcher()
-        .addCallback(this, callback);
-\end{lstlisting}
-\begin{itemize}
-\item Le problème le plus important que nous avons rencontré était le temps. En effet, se former sur les Fragments et tout ce qui touchait aux Fragments demandaient énormément de temps. Plus de temps nous passions à nous former moins de temps nous avions pour terminer l'application. Ainsi après 3 séances supplémentaires avec le responsable de cet UE et de nombreuse galères dans la programmation avec les Fragments, nous avons décidé de repasser dans un format classique en privilégiant les activités aux Fragments malgré l'économie d'énergie apporté par les Fragments en utilisant qu'une seule activité pour tout gérer.
-\end{itemize}
+Fragments qui est une notion pas vue en cours.
 \end{flushleft}
 \subsection{Notifications}
-\begin{flushleft}
-Lors de la réalisation du code concernant l'envoie de notifications de l'application afin de prévenir l'utilisateur le jour d'un évènement. Ainsi, pour créer la notification nous sommes passé par le code suivant:
-\center
-\begin{minipage}{0.8\linewidth}
-\includegraphics[width=\linewidth]{AlarmSet}
-\captionof{figure}{Code de mise en place de l'alarme}
-\end{minipage}
-\justify
-Le but de ce code est de créer une alarme pour la date de l'évènement afin d'envoyer une notification à l'utilisateur lorsque l'utilisateur ajoute un évènement à la base de données. Pour la création de cette notification, nous avons utilisé le code suivant: 
-\center
-\begin{minipage}{0.8\linewidth}
-\includegraphics[width=\linewidth]{NotifCode}
-\captionof{figure}{Code de mise en place de la notification}
-\end{minipage}
-\justify
-Pour créer la notification, nous récupérons l'évènement récemment créé grâce à la méthode getEvent de MyDbAdapter et ensuite créer la notification à l'aide du Notification.Builder et du NotificationManagerCompat. Cependant, nous avons rencontré un problème qui, aujourd'hui, n'est toujours pas résolu. Pour les tests nous avons créer l'alarme pour un déclenchement dans 10 secondes. Lors de la création de 2 évènements, le texte de la notification en se met pas à jour. La notification conserve les éléments de la 1\up{ère} notification. Quelques fois, les informations sont null.
-\begin{figure}[!h]
-    \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Notif}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Notif}
-    \end{subfigure}
-    \caption{Problème : Notifications sur 2 évènements}
-\end{figure}
-\end{flushleft}
 \subsection{Layout}
 \begin{flushleft}
 \justify
