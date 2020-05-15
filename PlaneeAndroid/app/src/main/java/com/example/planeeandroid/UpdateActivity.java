@@ -2,6 +2,7 @@ package com.example.planeeandroid;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -48,6 +49,7 @@ public class UpdateActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_add);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         myDataBase = new MyDBAdapter(this);
         final Intent intent = getIntent();
         idEvent = intent.getLongExtra("EventId", 0);
