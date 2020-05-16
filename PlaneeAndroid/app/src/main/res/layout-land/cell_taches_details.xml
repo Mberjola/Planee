@@ -44,8 +44,8 @@
 
         <TextView
             android:id="@+id/Details_Task_Store"
-            android:layout_width="303dp"
-            android:layout_height="68dp"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
             android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
@@ -63,7 +63,8 @@
         <TextView
             android:id="@+id/Details_Task_Url"
             android:layout_width="305dp"
-            android:layout_height="60dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
             android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"

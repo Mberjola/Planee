@@ -45,8 +45,8 @@
 
         <TextView
             android:id="@+id/Details_Task_Store"
-            android:layout_width="303dp"
-            android:layout_height="68dp"
+            android:layout_width="318dp"
+            android:layout_height="130dp"
             android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
@@ -57,14 +57,15 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.097" />
+            app:layout_constraintVertical_bias="0.128" />
 
         <TextView
             android:id="@+id/Details_Task_Url"
-            android:layout_width="305dp"
-            android:layout_height="60dp"
+            android:layout_width="326dp"
+            android:layout_height="113dp"
             android:gravity="center"
             android:padding="5dp"
             android:shadowColor="#ffffff"
@@ -75,9 +76,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.547" />
+            app:layout_constraintVertical_bias="0.786" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
