@@ -18,7 +18,7 @@ public class ReminderBroadcast extends BroadcastReceiver {
         myDb.close();
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "NotifyLemubit")
-                .setSmallIcon(R.drawable.ikki)
+                .setSmallIcon(R.drawable.logo)
                 .setContentTitle("Planee")
                 .setContentText("C'est l'heure de " + event.getNom())
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
