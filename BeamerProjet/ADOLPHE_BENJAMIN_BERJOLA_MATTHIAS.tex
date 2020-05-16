@@ -15,7 +15,7 @@
 \setbeamertemplate{navigation symbols}{} 
 \setbeamertemplate{headline}{}
 %\logo{} 
-%\institute{} 
+\institute{Université de la Réunion} 
 %\date{} 
 %\subject{} 
 \begin{document}
@@ -25,27 +25,36 @@
 \titlepage
 \end{frame}
 
-\begin{frame}{Plan}
-\begin{itemize}
-\item[•] Introduction \pause
-\item[•] Description de l'application  \pause
-\item[•] Problèmes rencontrés  \pause
-\item[•]  Conclusion 
 
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Introduction}
 \section{Introduction}
 
 \begin{itemize}
-\onslide<1>{\item[•] Le contexte}
-\onslide<2>{\item[•] L'idée}
+\onslide<1-3>{\item[•] Le contexte}
+\onslide<2-3>{\item[•] L'idée}
 \onslide<3>{\item[•] le plan d'action}
+
 
 \end{itemize}
 
 \end{frame}
+
+
+
+
+
+
+\begin{frame}{Plan}
+\begin{itemize}
+\item[•] Description de l'application  \pause
+\item[•] Architecture de l'application \pause
+\item[•] Problèmes rencontrés  
+
+\end{itemize}
+\end{frame}
+
+
 
 \begin{frame}{Description de l'application}
 \section{Description de l'application}
@@ -72,7 +81,38 @@ Contrairement aux applications de gestions habituel on peut tout programmer depu
 
 \begin{frame}{Architecture de l'application}
 \section{Architecture de l'application}
+4 activités: 
+\begin{itemize}
+\onslide<1,5>{\item[•] MainActivity}
+\onslide<2,5>{\item[•] AddActivity}
+\onslide<3>{\item[•] DetailActivity}
+\onslide<4>{\item[•] UpdateActivity}
+\end{itemize}
+\end{frame}
 
+\begin{frame}{MainActivity}
+\begin{columns}
+\column{0.35\textwidth}
+\includegraphics[scale=0.4]{HomeWEvents1}
+
+\column{0.35\textwidth}
+\includegraphics[scale=0.4]{HomeWEvents2}
+
+\column{0.35\textwidth}
+\includegraphics[scale=0.1]{ListViewNoEvent}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{AddActivity}
+\begin{columns}
+\column{0.5\textwidth}
+\includegraphics[scale=0.4]{FormNoTask}
+
+\column{0.5\textwidth}
+\includegraphics[scale=0.4]{FormWTask}
+
+\end{columns}
 
 \end{frame}
 
@@ -93,15 +133,48 @@ Contrairement aux applications de gestions habituel on peut tout programmer depu
 \begin{frame}{Problème Rencontrés}
 
 \begin{mybox}{Problèmes liés aux fragments}
+\onslide<1-3>{2 problèmes majeurs: }
+\begin{itemize}
+\onslide<2,3>{\item[•] Superposition des différentes pages}
+\onslide<3>{\item[•] Interface blanche dû au fait que le fragment se vide afin d'acceuillir la nouvelle page }
+\end{itemize}
 \end{mybox}
+
+
 
 \end{frame}
 
 \begin{frame}{Problème Rencontrés}
+\begin{columns}
 
-\begin{mybox}{Problèmes liés aux Layouts}
+\column{0.5\textwidth}
+\includegraphics[scale=0.2]{SupperPosFrag}
+
+\column{0.6\textwidth}
+\begin{mybox}{Solution pour la superposition}
+problème résolu avec les lignes de codes :$if(container != null){
+container.removeAllViews()}$ 
 \end{mybox}
 
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Problème Rencontrés}
+
+
+\begin{columns}
+
+\column{0.5\textwidth}
+\includegraphics[scale=0.4]{BugLayout}
+
+\column{0.6\textwidth}
+\begin{mybox}{Problèmes liés aux Layouts}
+Problème de mise à l'échelle selon la taille de l'écran 
+\end{mybox}
+
+
+\end{columns}
 \end{frame}
 
 
@@ -115,8 +188,8 @@ Un problème majeure s'est montré lors de la création
 des notifications.Selon la version d'Android utilisée il fallait crée manuellement un "channel" afin de pouvoir diffuser la notification dessus.
 \end{flushleft}
 \end{mybox}
-\begin{flushleft}\pause
-Si le channel n'était pas crée le message d'erreur suivant s'affiche dans le LogCat\\
+\begin{flushleft}
+Si le channel n'était pas crée le message d'erreur suivant s'affiche dans le LogCat\\ 
 \medskip
 \begin{minipage}{0.48\linewidth}
 \includegraphics[scale=0.35]{LogcatNotif}
@@ -127,9 +200,10 @@ Si le channel n'était pas crée le message d'erreur suivant s'affiche dans le L
 \end{frame}
 
 
+{%<--- Start local changes
+\setbeamertemplate{navigation symbols}{}
+\usebackgroundtemplate{\includegraphics[height=\paperheight]{conclusion}}
 \begin{frame}{Conclusion}
-\section{Conclusion}
-
-
 \end{frame}
+}
 \end{document}

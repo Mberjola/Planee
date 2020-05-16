@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.16)  14 MAY 2020 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.16)  16 MAY 2020 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,7 +990,7 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-36.
+41.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1025,55 +1025,149 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 ] [16
 
-] [17
-
-] [18
-
 ]
-<LogcatNotif.png, id=180, 1374.13374pt x 228.855pt>
-File: LogcatNotif.png Graphic file (type png)
-<use LogcatNotif.png>
-Package pdftex.def Info: LogcatNotif.png  used on input line 127.
-(pdftex.def)             Requested size: 480.95403pt x 80.10043pt.
-
-Overfull \hbox (333.4562pt too wide) in paragraph at lines 127--127
-[][] 
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127
+<HomeWEvents1.jpg, id=181, 222.8325pt x 481.8pt>
+File: HomeWEvents1.jpg Graphic file (type jpg)
+<use HomeWEvents1.jpg>
+Package pdftex.def Info: HomeWEvents1.jpg  used on input line 105.
+(pdftex.def)             Requested size: 89.13141pt x 192.71658pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 105
 .
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127
+LaTeX Font Info:    Trying to load font information for U+msb on input line 105
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 127.
+ut line 105.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) [19
+)
+<HomeWEvents2.jpg, id=182, 222.8325pt x 481.8pt>
+File: HomeWEvents2.jpg Graphic file (type jpg)
+<use HomeWEvents2.jpg>
+Package pdftex.def Info: HomeWEvents2.jpg  used on input line 105.
+(pdftex.def)             Requested size: 89.13141pt x 192.71658pt.
+<ListViewNoEvent.jpg, id=183, 1084.05pt x 2168.1pt>
+File: ListViewNoEvent.jpg Graphic file (type jpg)
+<use ListViewNoEvent.jpg>
+Package pdftex.def Info: ListViewNoEvent.jpg  used on input line 105.
+(pdftex.def)             Requested size: 108.41135pt x 216.8227pt.
 
- <./LogcatNotif.png>]
-File: LogcatNotif.png Graphic file (type png)
-<use LogcatNotif.png>
-Package pdftex.def Info: LogcatNotif.png  used on input line 127.
-(pdftex.def)             Requested size: 480.95403pt x 80.10043pt.
-
-Overfull \hbox (333.4562pt too wide) in paragraph at lines 127--127
-[][] 
+Overfull \hbox (0.85802pt too wide) in paragraph at lines 105--105
+[][]  
  []
 
-[20
+[17
+
+ <./HomeWEvents1.jpg> <./HomeWEvents2.jpg> <./ListViewNoEvent.jpg>]
+<FormNoTask.jpg, id=190, 406.51875pt x 881.2925pt>
+File: FormNoTask.jpg Graphic file (type jpg)
+<use FormNoTask.jpg>
+Package pdftex.def Info: FormNoTask.jpg  used on input line 117.
+(pdftex.def)             Requested size: 162.60461pt x 352.51076pt.
+
+Overfull \hbox (8.95969pt too wide) in paragraph at lines 117--117
+[][]  
+ []
+
+<FormWTask.jpg, id=191, 406.51875pt x 881.2925pt>
+File: FormWTask.jpg Graphic file (type jpg)
+<use FormWTask.jpg>
+Package pdftex.def Info: FormWTask.jpg  used on input line 117.
+(pdftex.def)             Requested size: 162.60461pt x 352.51076pt.
+
+Overfull \hbox (8.95969pt too wide) in paragraph at lines 117--117
+[][]  
+ []
+
+
+Overfull \vbox (124.74744pt too high) detected at line 117
+ []
+
+[18
+
+ <./FormNoTask.jpg> <./FormWTask.jpg>] [19
+
+] [20
 
 ] [21
 
+] [22
+
+] [23
+
+] [24
+
 ]
+<SupperPosFrag.jpg, id=235, 948.54375pt x 1897.0875pt>
+File: SupperPosFrag.jpg Graphic file (type jpg)
+<use SupperPosFrag.jpg>
+Package pdftex.def Info: SupperPosFrag.jpg  used on input line 161.
+(pdftex.def)             Requested size: 189.70538pt x 379.41078pt.
+
+Overfull \hbox (36.06046pt too wide) in paragraph at lines 161--161
+[][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/cmss/m/n/10.95 de codes :$\OT1/mathkerncmss/m/sl/10.95 if\OT1/cmss/m/n/10.9
+5 (\OT1/mathkerncmss/m/sl/10.95 container\OT1/cmss/m/n/10.95 ! =
+ []
+
+
+Overfull \vbox (151.64746pt too high) detected at line 161
+ []
+
+[25
+
+ <./SupperPosFrag.jpg>]
+<BugLayout.png, id=246, 486.81876pt x 859.21pt>
+File: BugLayout.png Graphic file (type png)
+<use BugLayout.png>
+Package pdftex.def Info: BugLayout.png  used on input line 178.
+(pdftex.def)             Requested size: 194.72404pt x 343.67792pt.
+
+Overfull \hbox (41.07912pt too wide) in paragraph at lines 178--178
+[][]  
+ []
+
+
+Overfull \vbox (115.9146pt too high) detected at line 178
+ []
+
+[26
+
+ <./BugLayout.png>]
+<LogcatNotif.png, id=255, 1374.13374pt x 228.855pt>
+File: LogcatNotif.png Graphic file (type png)
+<use LogcatNotif.png>
+Package pdftex.def Info: LogcatNotif.png  used on input line 200.
+(pdftex.def)             Requested size: 480.95403pt x 80.10043pt.
+
+Overfull \hbox (333.4562pt too wide) in paragraph at lines 200--200
+[][] 
+ []
+
+[27
+
+ <./LogcatNotif.png>]
+<conclusion.jpg, id=263, 1405.25pt x 983.675pt>
+File: conclusion.jpg Graphic file (type jpg)
+<use conclusion.jpg>
+Package pdftex.def Info: conclusion.jpg  used on input line 207.
+(pdftex.def)             Requested size: 390.20808pt x 273.14662pt.
+ [28
+
+ <./conclusion.jpg>]
 \tf@nav=\write8
 \openout8 = `ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.nav'.
 
@@ -1083,34 +1177,39 @@ Overfull \hbox (333.4562pt too wide) in paragraph at lines 127--127
 \tf@snm=\write10
 \openout10 = `ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
- (./ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
+
+(./ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
 Package rerunfilecheck Info: File `ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.out' has n
 ot changed.
-(rerunfilecheck)             Checksum: E39526747042FFEDAF557B26A0456FF6;691.
+(rerunfilecheck)             Checksum: 847B81DB4CA8B57CC5982126ACB0D4BC;908.
  ) 
 Here is how much of TeX's memory you used:
- 22883 strings out of 480608
- 445477 string characters out of 5903630
- 706305 words of memory out of 5000000
- 38205 multiletter control sequences out of 15000+600000
+ 22999 strings out of 480608
+ 447290 string characters out of 5903630
+ 706367 words of memory out of 5000000
+ 38303 multiletter control sequences out of 15000+600000
  543449 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,15n,80p,821b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,15n,80p,821b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.pdf (21 pages, 124587 bytes
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on ADOLPHE_BENJAMIN_BERJOLA_MATTHIAS.pdf (28 pages, 694545 bytes
 ).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
