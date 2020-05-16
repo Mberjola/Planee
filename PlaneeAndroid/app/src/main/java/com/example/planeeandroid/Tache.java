@@ -1,14 +1,13 @@
 package com.example.planeeandroid;
 
-import java.net.URL;
-import java.util.Date;
-
 public class Tache {
+    //Mise en place d'une tâche
     private long id;
     private String nom;
     private String nomMagasin;
     private String SiteMagasin;
 
+    //Constructeurs
     public Tache(long id, String nom, String nomMagasin, String siteMagasin) {
         this.id = id;
         this.nom = nom;
@@ -26,6 +25,7 @@ public class Tache {
 
     }
 
+    //Getters et setters
     public long getId() {
         return id;
     }

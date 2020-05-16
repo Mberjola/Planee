@@ -1,9 +1,6 @@
 package com.example.planeeandroid;
 
 import android.content.Context;
-
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +15,7 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
     public MyArrayDetailsAdapter(Context context, Tache[] Taches, int[] AleaColor) {
         super(context, R.layout.cell_taches_details, Taches);
         this.context = context;
+        //Tableau contenant les indices aléatoires permettant de colorer les différentes tâches
         this.AleaColor = AleaColor;
     }
 
@@ -42,14 +40,12 @@ public class MyArrayDetailsAdapter extends ArrayAdapter<Tache> {
         ImageView imageView = cellView.findViewById(R.id.imageView2);
         imageView.setImageResource(R.drawable.card_detail_style);
         int[] ColorArray = {R.color.bleu, R.color.jaune, R.color.mauve, R.color.rose, R.color.vert};
+        //Ici la tâche prendra la couleur en récupérant l'indice aléatoire dans le tableau AleaColor à l'indice position et on attribuera l'indice correspondant
+        //du tableau ColorArray
         int index = AleaColor[position];
         int couleur = context.getResources().getColor(ColorArray[index]);
-        Log.i("couleur", "" + couleur);
+        //Ajout de la couleur sur la tâche
         imageView.setColorFilter(couleur);
-        Log.i("Position", "" + position);
-        Log.i("Tach5", tache.getNom());
-        Log.i("Tach6", tache.getNomMagasin());
-        Log.i("Tach7", tache.getSiteMagasin());
         return cellView;
     }
 }

@@ -1,15 +1,16 @@
 package com.example.planeeandroid;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Evenement {
+    //Création d'un évènement
     private long id;
     private String nom;
     private String dateLimite;
     private ArrayList<Tache> Taches;
     private String heure;
 
+    //Constructeurs
     public Evenement(long id, String nom, String dateLimite, ArrayList<Tache> Taches, String heure) {
         this.id = id;
         this.nom = nom;
@@ -30,6 +31,7 @@ public class Evenement {
 
     }
 
+    //Getters et setters
     public long getId() {
         return id;
     }

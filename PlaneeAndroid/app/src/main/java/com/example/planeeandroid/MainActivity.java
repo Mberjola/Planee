@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -21,7 +20,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView text;
     MyDBAdapter myDataBase;
     private ArrayList<Evenement> events;
 
@@ -35,10 +33,13 @@ public class MainActivity extends AppCompatActivity {
         final ListView maListeView = findViewById(R.id.List);
         myDataBase = new MyDBAdapter(context);
         myDataBase.open();
+        //Récupération de tous les évènements
         events = myDataBase.getAllEvent();
         if (events.size() == 0) {
+            //Aucun évènement on affiche le texte
             textView.setText(R.string.NoEvents);
         } else {
+            //Dans ce cas, on convertit la liste en tableau afin d'utiliser MyArrayAdapter
             final Evenement[] evenements = new Evenement[events.size()];
             for (int i = 0; i < events.size(); i++) {
                 evenements[i] = events.get(i);
@@ -46,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
             final MyArrayAdapter myArray = new MyArrayAdapter(context, evenements);
             maListeView.setAdapter(myArray);
             maListeView.setClickable(true);
+            //Lors d'un appui long, apparition d'une boîte de dialogue afin de demander à l'utilisateur confirmation de la suppression de la tâche
             maListeView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
                 public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    //Création de la boite de dialogue
                     new AlertDialog.Builder(context)
                             .setTitle(R.string.deleteTitle)
                             .setMessage(R.string.deleteMessage)
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             });
+            //Lors d'un simple appuie, on bascule sur DetailActivity afin d'avoir les différentes informations sur les tâches
             maListeView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -80,13 +84,13 @@ public class MainActivity extends AppCompatActivity {
                     Evenement event = (Evenement) o;
                     Intent intentDetails = new Intent(MainActivity.this, DetailActivity.class);
                     intentDetails.putExtra("EventId", event.getId());
-                    Log.i("Test Bouton List", "" + event.getId());
                     startActivity(intentDetails);
                     finish();
                 }
             });
 
         }
+        //Lors d'un appui sur le bouton flottant, on bascule sur la page d'ajout d'un évènement
         FloatingActionButton plus = findViewById(R.id.Plus);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Gestion de l'appui sur le bouton retour
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.QuitTitle)

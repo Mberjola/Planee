@@ -49,11 +49,13 @@ public class UpdateActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_add);
+        //Pour des raisons de gestions sur les champs de saisies pour les tâches, l'utilisateur ne peut pas être en paysage lors de la mise à jour d'un évènement
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         myDataBase = new MyDBAdapter(this);
         final Intent intent = getIntent();
         idEvent = intent.getLongExtra("EventId", 0);
         myDataBase.open();
+        //Récupération de l'évènement
         event = myDataBase.getEvent(idEvent);
         EventName = findViewById(R.id.NomEvent);
         EventName.setText(event.getNom());
@@ -92,11 +94,13 @@ public class UpdateActivity extends AppCompatActivity {
         Minutes.setText(minutes);
         TachesList = findViewById(R.id.Taches);
         taches = event.getTaches();
+        //
         counterOld = 0;
         countOldTaskNameId = 0;
         countOldTaskStoreId = 100;
         countOldTaskURLId = 200;
         TaskIds = new int[taches.size()];
+        //Mise en place des tâches déjà présentes pour cet évènement
         for (int i = 0; i < taches.size(); i++) {
             View Myroot = getLayoutInflater().inflate(R.layout.task_layout, null);
             LinearLayout TaskModel = Myroot.findViewById(R.id.TacheLayout);

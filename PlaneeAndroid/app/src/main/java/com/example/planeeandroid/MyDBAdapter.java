@@ -5,11 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 public class MyDBAdapter {
+    //Mise en place des éléments de la base de données (Version, création des tables...)
     public static final int DB_version = 1;
     public static final String DB_name = "Planee.db";
 
@@ -44,18 +44,17 @@ public class MyDBAdapter {
         myDataBase.close();
     }
 
+    //Insertion d'un évènement dans la base (Evenement + tâches)
     public void InsertUnEvent(Evenement event) {
         insertEvent(event);
         long idEvent = getEventID(event.getNom(), event.getDateLimite());
-        Log.i("idEvent", "" + idEvent);
         for (int i = 0; i < event.getTaches().size(); i++) {
-
-            Log.i("Tache", "" + event.getTaches().get(i).getNom());
             if (!(event.getTaches().get(i).getNom().equals("")))
                 insertTache(event.getTaches().get(i), idEvent);
         }
     }
 
+    //Récupération de tout les évènements
     public ArrayList<Evenement> getAllEvent() {
         ArrayList<Evenement> events = new ArrayList<Evenement>();
         Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite, col_Heure},
@@ -70,6 +69,7 @@ public class MyDBAdapter {
         return events;
     }
 
+    //Insertion d'un évènement dans la table évènement
     public long insertEvent(Evenement event) {
         ContentValues values = new ContentValues();
         values.put(col_Name, event.getNom());
@@ -78,6 +78,7 @@ public class MyDBAdapter {
         return myDataBase.insert(Event_Table, null, values);
     }
 
+    //Mise à jour d'un évènement (évènement + tâches)
     public long UpdateEvent(Evenement event, long id) {
         ContentValues cv = new ContentValues();
         cv.put(col_Name, event.getNom());
@@ -90,6 +91,7 @@ public class MyDBAdapter {
         return myDataBase.update(Event_Table, cv, col_ID + "=" + id, null);
     }
 
+    //Récupérer l'id d'un évènement
     public long getEventID(String name, String dateLimite) {
         long id = -1;
         ArrayList<Evenement> evenements = new ArrayList<Evenement>();
@@ -112,6 +114,7 @@ public class MyDBAdapter {
         return id;
     }
 
+    //Récupération d'un évènement à partir de l'id
     public Evenement getEvent(long id) {
         Evenement event = new Evenement();
         Cursor c = myDataBase.query(Event_Table, new String[]{col_ID, col_Name, col_DateLimite, col_Heure},
@@ -128,12 +131,14 @@ public class MyDBAdapter {
         return event;
     }
 
+    //Suppression d'un évènement (évènement + tâches)
     public void supprimerEvent(long id) {
         supprimerTache(id);
         myDataBase.delete(Event_Table, col_ID + "=" + id, null);
     }
 
 
+    //Insertion d'un tâche
     public long insertTache(Tache tache, long idEvent) {
         ContentValues values = new ContentValues();
         values.put(col_Name, tache.getNom());
@@ -143,6 +148,7 @@ public class MyDBAdapter {
         return myDataBase.insert(Tache_Table, null, values);
     }
 
+    //Mise à jour d'une tâche
     public long updateTask(Tache tache, Long IdEvent) {
         ContentValues values = new ContentValues();
         values.put(col_Name, tache.getNom());
@@ -152,6 +158,7 @@ public class MyDBAdapter {
         return myDataBase.update(Tache_Table, values, col_ID + "=" + tache.getId(), null);
     }
 
+    //Récupérer l'ensemble des tâches d'un évènement
     public ArrayList<Tache> getEventTache(long id) {
         ArrayList<Tache> taches = new ArrayList<Tache>();
         Cursor c = myDataBase.query(Tache_Table, new String[]{col_ID, col_Name, col_Magasin, col_URL, col_IDEvent},
@@ -168,10 +175,12 @@ public class MyDBAdapter {
         return taches;
     }
 
+    //Suppression d'une tâche à partir de la clé étrangère IdEvenement
     public void supprimerTache(long idEvent) {
         myDataBase.delete(Tache_Table, col_IDEvent + "=" + idEvent, null);
     }
 
+    //Suppression d'une tâche à partir de son Id
     public void supprimerTacheId(long id) {
         myDataBase.delete(Tache_Table, col_ID + "=" + id, null);
     }
@@ -185,7 +194,6 @@ public class MyDBAdapter {
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(create_table_event);
             db.execSQL(create_table_tache);
-            Log.i("test", "Test de création");
         }
 
         @Override

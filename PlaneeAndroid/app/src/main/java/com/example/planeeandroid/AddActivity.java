@@ -23,11 +23,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class AddActivity extends AppCompatActivity {
     private TextView myDisplayDate;
@@ -37,22 +34,25 @@ public class AddActivity extends AppCompatActivity {
     private int counterName;
     private int counterMagasin;
     private int counterUrl;
-    private LinearLayout TaskLayout;
     private LinearLayout TachesList;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_add);
+        //Pour des raisons de gestions sur les champs de saisies pour les tâches, l'utilisateur ne peut pas être en paysage lors de l'ajout d'un évènement
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         final Context context = this;
         createNotificationChannel();
+        //Mise en place des compteurs afin de d'attribuer une id à chaque élément tâche
         counter = 0;
         counterName = 0;
         counterMagasin = 100;
         counterUrl = 200;
+        //Ouverture de la Base de données
         myDbAdapter = new MyDBAdapter(context);
         myDbAdapter.open();
         myDisplayDate = findViewById(R.id.DatePick);
+        //Récupération des éléments dans les différents champs du formulaire
         Button ajoutEvent = findViewById(R.id.addEvent);
         ajoutEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,13 +61,17 @@ public class AddActivity extends AppCompatActivity {
                 EditText Heure = findViewById(R.id.TimeHeure);
                 TextView h = findViewById(R.id.h);
                 EditText Min = findViewById(R.id.TimeMin);
+                //Vérification que les champs Nom date et heure ont bien été remplis
                 if ((!(EventName.getText().toString().equals(""))) && (!(myDisplayDate.getText().toString().equals(R.string.PickDate))) || (!(Heure.getText().toString().equals(""))) || (!(Min.getText().toString().equals("")))) {
                     ArrayList<Tache> taches = new ArrayList<Tache>();
+                    //Afin de faciliter la récupération des éléments en rapport avec les tâches les id des noms de tâches iront de 0 à 99, les ids des noms de magasins
+                    // iront de 100 à 199 et les ids d'URL de magasin iront de 200 à 299.
                     for (int i = 0; i < counter; i++) {
                         Tache TacheInput = new Tache();
                         EditText textName = (EditText) findViewById(i);
                         EditText textMagasin = (EditText) findViewById(100 + i);
                         EditText textUrl = (EditText) findViewById(200 + i);
+                        //Pour chaque tâche on vérifie si l'utilisateur a rempli le champs. Si c'est le cas on enregistre la tâches sinon la tache sera vide
                         if (!(textName == null)) {
                             TacheInput.setNom(textName.getText().toString());
                         } else {
@@ -84,19 +88,19 @@ public class AddActivity extends AppCompatActivity {
                             TacheInput.setSiteMagasin("");
                         }
                         taches.add(TacheInput);
-                        Log.i("name", TacheInput.getNom());
-                        Log.i("Magasin", TacheInput.getNomMagasin());
-                        Log.i("URL", TacheInput.getSiteMagasin());
                     }
+                    //Remise à zéro des compteurs
                     counter = 0;
                     counterName = 0;
                     counterMagasin = 100;
                     counterUrl = 200;
+                    //Création et insertion de l'évènement dans la base de données
                     Evenement evenement = new Evenement(0, EventName.getText().toString(), myDisplayDate.getText().toString(), taches, Heure.getText().toString() + h.getText() + Min.getText().toString());
                     myDbAdapter.InsertUnEvent(evenement);
                     Toast.makeText(context, R.string.add, Toast.LENGTH_LONG).show();
                     Log.i("Insert", "Insert OK");
                     Toast.makeText(AddActivity.this, "Reminder set", Toast.LENGTH_SHORT).show();
+                    //Mise en place de l'alarm grâce à AlarmManager
                     Intent intent = new Intent(AddActivity.this, ReminderBroadcast.class);
                     intent.putExtra("IdEvent", myDbAdapter.getEventID(evenement.getNom(), evenement.getDateLimite()));
                     PendingIntent pendingIntent = PendingIntent.getBroadcast(AddActivity.this, 0, intent, 0);
@@ -104,6 +108,7 @@ public class AddActivity extends AppCompatActivity {
                     long timeAtButtonClick = System.currentTimeMillis();
                     long tenSecondes = 1000 * 10;
                     alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick + tenSecondes, pendingIntent);
+                    //Retour à l'accueil
                     Intent Myintent = new Intent(AddActivity.this, MainActivity.class);
                     startActivity(Myintent);
                     finish();
@@ -113,6 +118,8 @@ public class AddActivity extends AppCompatActivity {
             }
         });
         //Ajouter une tâche
+        //Lors de l'ajout d'une nouvelle tâche on va ajouter à un LinearLayout présent dans le xml un "formulaire" type pour les tâches
+        //Afin de pouvoir les récupérer nous avons décidé de donner un id à chaque élément.
         Button ajoutTask = findViewById(R.id.NewTache);
         TachesList = findViewById(R.id.Taches);
         ajoutTask.setOnClickListener(new View.OnClickListener() {
@@ -156,12 +163,14 @@ public class AddActivity extends AppCompatActivity {
         };
     }
 
+    //Gestion du bouton retour
     public void onBackPressed() {
         Intent intentToHome = new Intent(AddActivity.this, MainActivity.class);
         startActivity(intentToHome);
         finish();
     }
 
+    //Création du channel de Notification
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "LemubitReminderChannel";

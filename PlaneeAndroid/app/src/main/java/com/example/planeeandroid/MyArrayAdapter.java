@@ -8,8 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 public class MyArrayAdapter extends ArrayAdapter<Evenement> {
     private final Context context;
 
@@ -37,7 +35,9 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         String titre = event.getNom();
         Titre.setText(titre);
         date.setText(dateLimite);
+        //Sur la page d'accueil, la couleur de la carte changera selon l'évènement
         int index;
+        //On regarde si le titre contient une de ces chaînes et on affectera une valeur à l'index en fonction
         if ((titre.contains("mariage")) || (titre.contains("Mariage"))
                 || (titre.contains("wedding")) || (titre.contains("Wedding"))) {
             index = 0;
@@ -58,8 +58,10 @@ public class MyArrayAdapter extends ArrayAdapter<Evenement> {
         } else {
             index = 4;
         }
+        //Tableau de couleur
         int[] ColorArray = {R.color.rose, R.color.vert, R.color.bleu, R.color.jaune, R.color.mauve};
         int couleur = context.getResources().getColor(ColorArray[index]);
+        //Changement de la couleur de la carte
         imageView.setColorFilter(couleur);
         return cellView;
     }

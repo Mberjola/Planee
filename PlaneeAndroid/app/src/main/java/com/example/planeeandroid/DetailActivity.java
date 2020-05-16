@@ -23,19 +23,29 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_details);
+        //Ouverture de la base de données
+        //Création de l'intent pour récupérer l'Id de l'évènement choisi par l'utilisateur lors du click sur la page d'accueil
         myDataBase = new MyDBAdapter(this);
         final Intent intent = getIntent();
         final Long idEvent = intent.getLongExtra("EventId", 0);
         myDataBase.open();
         Evenement event = myDataBase.getEvent(idEvent);
+        //Récupération de l'évènement et de la liste tâches
         final ListView maListView2 = findViewById(R.id.Details_Task_Liste);
         ArrayList<Tache> taches = event.getTaches();
         if (taches.size() > 0) {
             final Tache[] TacheArray = new Tache[taches.size()];
+            //Tableau qui va permettre de contenir l'indice afin d'attribuer une couleur aléatoire à chaque tache lors de l'affichage
             int[] AleatColor = new int[taches.size()];
+            //Nombre aléatoire
             int answer = 0;
+            //Conversion de la liste de tâches en tableau afin de pouvoir utiliser MyArrayDetailAdapter
             for (int i = 0; i < TacheArray.length; i++) {
                 TacheArray[i] = taches.get(i);
+                //4 couleurs sont disponibles (voir tableau dans MyArrayDetailsAdapter)
+                //Ainsi le nombre de tâche peut être supérieur au nombre de couleur disponible, dans ce cas nous allons juste
+                // regarder si l'élément précedent possède le même indice aléatoire. Si l'indice aléatoire est différent, on le conserve
+                // sinon on recherche un indice aléatoire
                 do {
                     answer = intAleat(0, 4);
                 } while (i >= 1 && AleatColor[i - 1] == answer);
@@ -43,6 +53,7 @@ public class DetailActivity extends AppCompatActivity {
             }
             final MyArrayDetailsAdapter myArrayDetailsAdapter = new MyArrayDetailsAdapter(this, TacheArray, AleatColor);
             maListView2.setAdapter(myArrayDetailsAdapter);
+            //Lors d'un click sur une tâche, celle-ci sera complétée et on pourra l'effacer de l'affichage et de la base de données locale
             maListView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -57,9 +68,11 @@ public class DetailActivity extends AppCompatActivity {
                 }
             });
         } else {
+            //Si aucune tâche n'est présente on affiche ce texte
             TextView NoTask = findViewById(R.id.NoTask);
             NoTask.setText(R.string.NoTask);
         }
+        //L'appuie sur le bouton flottant permettra de modifier l'évènement
         FloatingActionButton plus = findViewById(R.id.Plus);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +85,7 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
+    //Gestion du bouton retour
     public void onBackPressed() {
         Intent intentToHome = new Intent(DetailActivity.this, MainActivity.class);
         startActivity(intentToHome);
@@ -81,9 +95,11 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //fermeture de la base de données
         myDataBase.close();
     }
 
+    //Tirage d'un entier aléatoire entre min et max
     public static int intAleat(int min, int max) {
         int res = 0;
         res = (int) (Math.random() * (max - min + 1) + min);
