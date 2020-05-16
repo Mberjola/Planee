@@ -1,34 +1,26 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{2}%
+\contentsline {section}{\numberline {0.1}Principe}{2}{section.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}L'application Planee}{3}%
+\contentsline {section}{\numberline {0.2}Architecture de l'application}{2}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Principe}{3}%
+\contentsline {subsection}{\numberline {0.2.1}MainActivity}{2}{subsection.0.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Architecture de l'application}{3}%
+\contentsline {subsection}{\numberline {0.2.2}AddActivity}{3}{subsection.0.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}MainActivity}{3}%
+\contentsline {subsection}{\numberline {0.2.3}DetailsActivty}{4}{subsection.0.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}AddActivity}{4}%
+\contentsline {subsection}{\numberline {0.2.4}UpdateActivity}{5}{subsection.0.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}DetailsActivty}{5}%
+\contentsline {subsection}{\numberline {0.2.5}Bases de données}{6}{subsection.0.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}UpdateActivity}{6}%
+\contentsline {section}{\numberline {0.3}Problèmes rencontrés}{7}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.5}Bases de données}{7}%
+\contentsline {subsection}{\numberline {0.3.1}Fragments}{7}{subsection.0.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Problèmes rencontrés}{8}%
+\contentsline {subsection}{\numberline {0.3.2}Notifications}{9}{subsection.0.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Fragments}{8}%
+\contentsline {subsection}{\numberline {0.3.3}Layout}{10}{subsection.0.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Notifications}{10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Layout}{11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Amélioration futures}{11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion}{12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Bibliographie}{13}%
+\contentsline {section}{\numberline {0.4}Amélioration futures}{10}{section.0.4}%

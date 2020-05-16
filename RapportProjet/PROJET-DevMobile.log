@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.4.30)  15 MAY 2020 21:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.16)  16 MAY 2020 17:35
 entering extended mode
-**./PROJET-DevMobile.tex
-(PROJET-DevMobile.tex
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**PROJET-DevMobile.tex
+(./PROJET-DevMobile.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-04-06>
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -22,8 +24,7 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fncychap\fncychap.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip49
 \mylen=\skip50
@@ -33,8 +34,7 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \pyy=\skip54
 \pxx=\skip55
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
 \beforetitleunit=\skip56
@@ -46,57 +46,51 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen138
 \titlewidthfirst=\dimen139
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexc
-mds.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwar
-err.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count176
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
-y"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoption
-s.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetk
-eys.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count177
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
-"
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -151,15 +145,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip65
 \blx@bcfin=\read2
 \blx@bcfout=\write3
-\blx@langwohyphens=\language78
+\blx@langwohyphens=\language86
 \c@mincomprange=\count285
 \c@maxcomprange=\count286
 \c@mincompwidth=\count287
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.de
-f"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -249,15 +242,13 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-compa
-t.def"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-def"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 \c@textcitecount=\count356
 \c@textcitetotal=\count357
@@ -276,14 +267,12 @@ File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\numer
-ic.bbx"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
-ard.bbx"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count365
 \c@bbx:relatedtotal=\count366
@@ -291,8 +280,7 @@ File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
-ic.cbx"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -309,47 +297,36 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-cfg"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) ("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
-y"
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/03/22 3.42 The Babel package
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def
-"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2020/03/22 3.42 Babel switching mechanism
 )
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel-french\fre
-nch.ldf"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2020/01/30 v3.5g French support from the babel system
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/03/22 3.42 Babel common definitions
 \babel@savecnt=\count367
 \U@D=\dimen140
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
-ef")
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
 \bbl@dirlevel=\count368
 )
 Package babel Info: \l@acadian = using hyphenrules for french
-(babel)             (\language22) on input line 91.
+(babel)             (\language28) on input line 91.
 Package babel Info: \l@canadien = using hyphenrules for french
-(babel)             (\language22) on input line 92.
+(babel)             (\language28) on input line 92.
 \FB@nonchar=\count369
 Package babel Info: Making : an active character on input line 419.
 Package babel Info: Making ; an active character on input line 420.
@@ -372,35 +349,28 @@ Package babel Info: Making ? an active character on input line 422.
 \parindentFFN=\dimen147
 \FBfnindent=\dimen148
 ))
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/carlisle\scalefnt.
-sty")
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
-y"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip80
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
-y"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
-"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen149
 ))
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
-"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
-"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count377
@@ -441,8 +411,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -450,134 +419,211 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
-ty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen158
+\Hy@linkcounter=\count389
+\Hy@pagecounter=\count390
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count391
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count392
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen159
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count393
+\Field@Width=\dimen160
+\Fld@charsize=\dimen161
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count394
+\c@Item=\count395
+\c@Hfootnote=\count396
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count397
+\c@bookmark@seq@number=\count398
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip83
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
-ics.cfg"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
-x.def"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen158
-\Gin@req@width=\dimen159
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\fullpage.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip83
+\FP@margin=\skip84
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
-y"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
-ty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen160
-\captionmargin@=\dimen161
-\captionwidth=\dimen162
-\caption@tempdima=\dimen163
-\caption@indent=\dimen164
-\caption@parindent=\dimen165
-\caption@hangindent=\dimen166
+\captionmargin=\dimen164
+\captionmargin@=\dimen165
+\captionwidth=\dimen166
+\caption@tempdima=\dimen167
+\caption@indent=\dimen168
+\caption@parindent=\dimen169
+\caption@hangindent=\dimen170
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count389
-\c@continuedfloat=\count390
+\c@caption@flags=\count399
+\c@continuedfloat=\count400
+Package caption Info: hyperref package is loaded.
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
-.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-\c@subfigure=\count391
-\c@subtable=\count392
+\c@subfigure=\count401
+\c@subtable=\count402
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
-"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count393
-\Gm@cntv=\count394
-\c@Gm@tempcnt=\count395
-\Gm@bindingoffset=\dimen167
-\Gm@wd@mp=\dimen168
-\Gm@odd@mp=\dimen169
-\Gm@even@mp=\dimen170
-\Gm@layoutwidth=\dimen171
-\Gm@layoutheight=\dimen172
-\Gm@layouthoffset=\dimen173
-\Gm@layoutvoffset=\dimen174
+\Gm@cnth=\count403
+\Gm@cntv=\count404
+\c@Gm@tempcnt=\count405
+\Gm@bindingoffset=\dimen171
+\Gm@wd@mp=\dimen172
+\Gm@odd@mp=\dimen173
+\Gm@even@mp=\dimen174
+\Gm@layoutwidth=\dimen175
+\Gm@layoutheight=\dimen176
+\Gm@layouthoffset=\dimen177
+\Gm@layoutvoffset=\dimen178
 \Gm@dimlist=\toks25
-
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-cfg"))
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ragged2e\ragged2e.
-sty"
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everysel.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip84
-\RaggedLeftLeftskip=\skip85
-\RaggedRightLeftskip=\skip86
-\CenteringRightskip=\skip87
-\RaggedLeftRightskip=\skip88
-\RaggedRightRightskip=\skip89
-\CenteringParfillskip=\skip90
-\RaggedLeftParfillskip=\skip91
-\RaggedRightParfillskip=\skip92
-\JustifyingParfillskip=\skip93
-\CenteringParindent=\skip94
-\RaggedLeftParindent=\skip95
-\RaggedRightParindent=\skip96
-\JustifyingParindent=\skip97
+\CenteringLeftskip=\skip85
+\RaggedLeftLeftskip=\skip86
+\RaggedRightLeftskip=\skip87
+\CenteringRightskip=\skip88
+\RaggedLeftRightskip=\skip89
+\RaggedRightRightskip=\skip90
+\CenteringParfillskip=\skip91
+\RaggedLeftParfillskip=\skip92
+\RaggedRightParfillskip=\skip93
+\JustifyingParfillskip=\skip94
+\CenteringParindent=\skip95
+\RaggedLeftParindent=\skip96
+\RaggedRightParindent=\skip97
+\JustifyingParindent=\skip98
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
-sty"
-\lst@mode=\count396
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count406
 \lst@gtempboxa=\box48
 \lst@token=\toks26
-\lst@length=\count397
-\lst@currlwidth=\dimen175
-\lst@column=\count398
-\lst@pos=\count399
-\lst@lostspace=\dimen176
-\lst@width=\dimen177
-\lst@newlines=\count400
-\lst@lineno=\count401
-\lst@maxwidth=\dimen178
+\lst@length=\count407
+\lst@currlwidth=\dimen179
+\lst@column=\count408
+\lst@pos=\count409
+\lst@lostspace=\dimen180
+\lst@width=\dimen181
+\lst@newlines=\count410
+\lst@lineno=\count411
+\lst@maxwidth=\dimen182
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
-ty"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count402
-\lst@skipnumbers=\count403
+\c@lstnumber=\count412
+\lst@skipnumbers=\count413
 \lst@framebox=\box49
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
-cfg"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
@@ -586,36 +632,36 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count404
-\@quotereset=\count405
-
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
-d-pdfmode.def"
+\@quotelevel=\count414
+\@quotereset=\count415
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count406
+\l__kernel_color_stack_int=\count416
 \l__pdf_internal_box=\box50
-) (PROJET-DevMobile.aux)
+)
+(./PROJET-DevMobile.aux)
 \openout1 = `PROJET-DevMobile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\frenc
-h.lbx"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 File: french.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -625,34 +671,58 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'PROJET-DevMobile.bbl' found.
- (PROJET-DevMobile.bbl)
-Package biblatex Info: Reference section=0 on input line 23.
-Package biblatex Info: Reference segment=0 on input line 23.
-LaTeX Info: Redefining \degres on input line 23.
-LaTeX Info: Redefining \dots on input line 23.
-LaTeX Info: Redefining \up on input line 23.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
-df.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count407
-\scratchdimen=\dimen179
-\scratchbox=\box51
-\nofMPsegments=\count408
-\nofMParguments=\count409
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count410
-\MPscratchDim=\dimen180
-\MPnumerator=\count411
-\makeMPintoPDFobject=\count412
-\everyMPtoPDFconversion=\toks28
+(./PROJET-DevMobile.bbl)
+Package biblatex Info: Reference section=0 on input line 25.
+Package biblatex Info: Reference segment=0 on input line 25.
+LaTeX Info: Redefining \degres on input line 25.
+LaTeX Info: Redefining \dots on input line 25.
+LaTeX Info: Redefining \up on input line 25.
+\AtBeginShipoutBox=\box51
+Package hyperref Info: Link coloring OFF on input line 25.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
-pdf-base.sty"
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count417
+)
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
+ (./PROJET-DevMobile.out) (./PROJET-DevMobile.out)
+\@outlinefile=\write4
+\openout4 = `PROJET-DevMobile.out'.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count418
+\scratchdimen=\dimen183
+\scratchbox=\box52
+\nofMPsegments=\count419
+\nofMParguments=\count420
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count421
+\MPscratchDim=\dimen184
+\MPnumerator=\count422
+\makeMPintoPDFobject=\count423
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -692,198 +762,295 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 23.
-\c@lstlisting=\count413
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Info: Redefining \selectfont on input line 25.
+\c@lstlisting=\count424
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
 
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
 
-("C:\Users\adolp\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/adolp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 35--35
 [][] 
  []
 
-(PROJET-DevMobile.toc)
-\tf@toc=\write4
-\openout4 = `PROJET-DevMobile.toc'.
+(./PROJET-DevMobile.toc)
+\tf@toc=\write5
+\openout5 = `PROJET-DevMobile.toc'.
 
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.36 \newpage
+              [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \end{abstract}
+                    [1]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 43--43
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.56 \newpage
+              [1
 
 ]
-Chapitre 1.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 57--57
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+<HomeWEvents1.jpg, id=86, 222.8325pt x 481.8pt>
+File: HomeWEvents1.jpg Graphic file (type jpg)
+<use HomeWEvents1.jpg>
+Package pdftex.def Info: HomeWEvents1.jpg  used on input line 93.
+(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
+<HomeWEvents2.jpg, id=87, 222.8325pt x 481.8pt>
+File: HomeWEvents2.jpg Graphic file (type jpg)
+<use HomeWEvents2.jpg>
+Package pdftex.def Info: HomeWEvents2.jpg  used on input line 96.
+(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
+<HomeNoEvent.jpg, id=88, 222.8325pt x 481.8pt>
+File: HomeNoEvent.jpg Graphic file (type jpg)
+<use HomeNoEvent.jpg>
+Package pdftex.def Info: HomeNoEvent.jpg  used on input line 99.
+(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
 [2
 
 ]
-Chapitre 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-[3
-
-]
-<HomeWEvents1.jpg, id=23, 222.8325pt x 481.8pt>
-File: HomeWEvents1.jpg Graphic file (type jpg)
-<use HomeWEvents1.jpg>
-Package pdftex.def Info: HomeWEvents1.jpg  used on input line 85.
-(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
-<HomeWEvents2.jpg, id=24, 222.8325pt x 481.8pt>
-File: HomeWEvents2.jpg Graphic file (type jpg)
-<use HomeWEvents2.jpg>
-Package pdftex.def Info: HomeWEvents2.jpg  used on input line 88.
-(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
-<HomeNoEvent.jpg, id=25, 222.8325pt x 481.8pt>
-File: HomeNoEvent.jpg Graphic file (type jpg)
-<use HomeNoEvent.jpg>
-Package pdftex.def Info: HomeNoEvent.jpg  used on input line 91.
-(pdftex.def)             Requested size: 145.11053pt x 313.75441pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-<FormWTask.jpg, id=26, 406.51875pt x 881.2925pt>
+<FormWTask.jpg, id=96, 406.51875pt x 881.2925pt>
 File: FormWTask.jpg Graphic file (type jpg)
 <use FormWTask.jpg>
-Package pdftex.def Info: FormWTask.jpg  used on input line 114.
+Package pdftex.def Info: FormWTask.jpg  used on input line 122.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
-<FormNoTask.jpg, id=27, 406.51875pt x 881.2925pt>
+<FormNoTask.jpg, id=97, 406.51875pt x 881.2925pt>
 File: FormNoTask.jpg Graphic file (type jpg)
 <use FormNoTask.jpg>
-Package pdftex.def Info: FormNoTask.jpg  used on input line 117.
+Package pdftex.def Info: FormNoTask.jpg  used on input line 125.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
-[4 <./HomeWEvents1.jpg> <./HomeWEvents2.jpg> <./HomeNoEvent.jpg>]
-<Tasks.jpg, id=32, 406.51875pt x 881.2925pt>
+ [3 <./HomeWEvents1.jpg> <./HomeWEvents2.jpg> <./HomeNoEvent.jpg>]
+<Tasks.jpg, id=104, 406.51875pt x 881.2925pt>
 File: Tasks.jpg Graphic file (type jpg)
 <use Tasks.jpg>
-Package pdftex.def Info: Tasks.jpg  used on input line 135.
+Package pdftex.def Info: Tasks.jpg  used on input line 143.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
-<NoTask.jpg, id=33, 406.51875pt x 881.2925pt>
+<NoTask.jpg, id=105, 406.51875pt x 881.2925pt>
 File: NoTask.jpg Graphic file (type jpg)
 <use NoTask.jpg>
-Package pdftex.def Info: NoTask.jpg  used on input line 138.
+Package pdftex.def Info: NoTask.jpg  used on input line 146.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./FormWTask.jpg> <./FormNoTask.jpg>]
-<FormUpdateNoModif.jpg, id=37, 406.51875pt x 881.2925pt>
+[4 <./FormWTask.jpg> <./FormNoTask.jpg>]
+<FormUpdateNoModif.jpg, id=112, 406.51875pt x 881.2925pt>
 File: FormUpdateNoModif.jpg Graphic file (type jpg)
 <use FormUpdateNoModif.jpg>
-Package pdftex.def Info: FormUpdateNoModif.jpg  used on input line 151.
+Package pdftex.def Info: FormUpdateNoModif.jpg  used on input line 159.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
-<FormUpdateModif.jpg, id=38, 406.51875pt x 881.2925pt>
+<FormUpdateModif.jpg, id=113, 406.51875pt x 881.2925pt>
 File: FormUpdateModif.jpg Graphic file (type jpg)
 <use FormUpdateModif.jpg>
-Package pdftex.def Info: FormUpdateModif.jpg  used on input line 154.
+Package pdftex.def Info: FormUpdateModif.jpg  used on input line 162.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
 File: FormUpdateModif.jpg Graphic file (type jpg)
 <use FormUpdateModif.jpg>
-Package pdftex.def Info: FormUpdateModif.jpg  used on input line 157.
+Package pdftex.def Info: FormUpdateModif.jpg  used on input line 165.
 (pdftex.def)             Requested size: 145.11053pt x 314.57558pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./Tasks.jpg> <./NoTask.jpg>]
-<SchemaBDD.png, id=43, 322.20375pt x 203.76125pt>
+[5 <./Tasks.jpg> <./NoTask.jpg>]
+<SchemaBDD.png, id=119, 322.20375pt x 203.76125pt>
 File: SchemaBDD.png Graphic file (type png)
 <use SchemaBDD.png>
-Package pdftex.def Info: SchemaBDD.png  used on input line 200.
+Package pdftex.def Info: SchemaBDD.png  used on input line 208.
 (pdftex.def)             Requested size: 145.11053pt x 91.76944pt.
-<TableEvent.png, id=45, 275.0275pt x 175.65625pt>
+<TableEvent.png, id=121, 275.0275pt x 175.65625pt>
 File: TableEvent.png Graphic file (type png)
 <use TableEvent.png>
-Package pdftex.def Info: TableEvent.png  used on input line 203.
+Package pdftex.def Info: TableEvent.png  used on input line 211.
 (pdftex.def)             Requested size: 145.11053pt x 92.68192pt.
-<TableTache.png, id=46, 376.40625pt x 177.66376pt>
+<TableTache.png, id=122, 376.40625pt x 177.66376pt>
 File: TableTache.png Graphic file (type png)
 <use TableTache.png>
-Package pdftex.def Info: TableTache.png  used on input line 206.
+Package pdftex.def Info: TableTache.png  used on input line 214.
 (pdftex.def)             Requested size: 145.11053pt x 68.49428pt.
- [7 <./FormUpdateNoModif.jpg> <./FormUpdateModif.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+ [6 <./FormUpdateNoModif.jpg> <./FormUpdateModif.jpg>]
+
+LaTeX Warning: Citation '1' on page 7 undefined on input line 227.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-<Template.png, id=50, 370.38374pt x 281.05pt>
+<Template.png, id=128, 370.38374pt x 281.05pt>
 File: Template.png Graphic file (type png)
 <use Template.png>
-Package pdftex.def Info: Template.png  used on input line 222.
+Package pdftex.def Info: Template.png  used on input line 230.
 (pdftex.def)             Requested size: 232.17242pt x 176.17471pt.
-<SupperPosFrag.jpg, id=51, 948.54375pt x 1897.0875pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 231.
+See the caption package documentation for explanation.
+
+<SupperPosFrag.jpg, id=129, 948.54375pt x 1897.0875pt>
 File: SupperPosFrag.jpg Graphic file (type jpg)
 <use SupperPosFrag.jpg>
-Package pdftex.def Info: SupperPosFrag.jpg  used on input line 232.
+Package pdftex.def Info: SupperPosFrag.jpg  used on input line 240.
 (pdftex.def)             Requested size: 215.25407pt x 430.50256pt.
-[8 <./SchemaBDD.png> <./TableEvent.png> <./TableTache.png> <./Template.png>]
-[9 <./SupperPosFrag.jpg>]
-<AlarmSet.png, id=62, 1173.38374pt x 203.76125pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 241.
+See the caption package documentation for explanation.
+
+[7 <./SchemaBDD.png> <./TableEvent.png> <./TableTache.png> <./Template.png>]
+[8 <./SupperPosFrag.jpg>]
+<AlarmSet.png, id=159, 1173.38374pt x 203.76125pt>
 File: AlarmSet.png Graphic file (type png)
 <use AlarmSet.png>
-Package pdftex.def Info: AlarmSet.png  used on input line 271.
+Package pdftex.def Info: AlarmSet.png  used on input line 279.
 (pdftex.def)             Requested size: 386.95897pt x 67.19478pt.
-<NotifCode.png, id=63, 1204.5pt x 648.4225pt>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 280.
+See the caption package documentation for explanation.
+
+<NotifCode.png, id=160, 1204.5pt x 648.4225pt>
 File: NotifCode.png Graphic file (type png)
 <use NotifCode.png>
-Package pdftex.def Info: NotifCode.png  used on input line 278.
+Package pdftex.def Info: NotifCode.png  used on input line 286.
 (pdftex.def)             Requested size: 386.95897pt x 208.31075pt.
-<Notif.png, id=64, 378.41376pt x 126.4725pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 287.
+See the caption package documentation for explanation.
+
+<Notif.png, id=161, 378.41376pt x 126.4725pt>
 File: Notif.png Graphic file (type png)
 <use Notif.png>
-Package pdftex.def Info: Notif.png  used on input line 286.
+Package pdftex.def Info: Notif.png  used on input line 294.
 (pdftex.def)             Requested size: 145.11053pt x 48.49811pt.
 File: Notif.png Graphic file (type png)
 <use Notif.png>
-Package pdftex.def Info: Notif.png  used on input line 289.
+Package pdftex.def Info: Notif.png  used on input line 297.
 (pdftex.def)             Requested size: 145.11053pt x 48.49811pt.
- [10 <./AlarmSet.png> <./NotifCode.png>] [11 <./Notif.png>]
-Chapitre 3.
+[9 <./AlarmSet.png> <./NotifCode.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+<logCatNotif.png, id=176, 1374.13374pt x 228.855pt>
+File: logCatNotif.png Graphic file (type png)
+<use logCatNotif.png>
+Package pdftex.def Info: logCatNotif.png  used on input line 307.
+(pdftex.def)             Requested size: 412.2433pt x 68.65701pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 308.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Citation '2' on page 10 undefined on input line 310.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 305--311
+[]$[]$ 
+ []
+
+[10 <./Notif.png> <./logCatNotif.png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 331--331
+[][] 
+ []
+
+
+LaTeX Warning: Citation '3' on page 11 undefined on input line 334.
+
+[11
+
+]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 337--337
+[][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
 [12
 
 ]
-Chapitre 4.
-[13
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+ (./PROJET-DevMobile.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package rerunfilecheck Info: File `PROJET-DevMobile.out' has not changed.
+(rerunfilecheck)             Checksum: 0B80BD5FDAF63947AB08C9EC3983F688;759.
 
-] (PROJET-DevMobile.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                PROJET-DevMobile
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'PROJET-DevMobile.run.xml'.
 \openout1 = `PROJET-DevMobile.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14908 strings out of 480930
- 249577 string characters out of 2899761
- 886696 words of memory out of 3000000
- 30612 multiletter control sequences out of 15000+200000
- 549076 words of font info for 70 fonts, out of 3000000 for 9000
+ 18532 strings out of 480608
+ 305337 string characters out of 5903630
+ 964760 words of memory out of 5000000
+ 34124 multiletter control sequences out of 15000+600000
+ 547530 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,42p,834b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecrm0800.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\eccc1200.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\adolp\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\adolp\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\adolp\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Us
-ers\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.
-pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm2488.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecrm1440.pk> <C:\Users\adolp\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm2074.pk>
-Output written on PROJET-DevMobile.pdf (14 pages, 627809 bytes).
+ 41i,8n,42p,1048b,1870s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb>
+Output written on PROJET-DevMobile.pdf (15 pages, 707740 bytes).
 PDF statistics:
- 376 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

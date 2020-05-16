@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{fullpage}
@@ -15,6 +16,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{ragged2e}
 \usepackage{listings}
+\renewcommand\FmN[1]{}
 
 \author{BERJOLA Matthias 37000961-ADOLPHE Benjamin 37001213}           %   
 
@@ -31,8 +33,14 @@
 \newpage
 
 \tableofcontents
-
-\chapter{Introduction}  
+\newpage
+\begin{abstract}
+\begin{flushleft}
+\justify
+Android est un OS assez répandu de nos jours: Téléphones, tablettes, Tv etc.. De ce fait durant l'UE de développement mobile le choix de réalisé une application sous Android à été fait. Dans ce rapport sera détaillé le cheminement suivi  afin de coder l'application. On y trouve une description brève de l'application, une  architecture de celle-ci ainsi qu'une énumération des différents problèmes rencontrés.
+\end{flushleft}
+\end{abstract}
+\chapter*{Introduction}  
 \begin{flushleft}
 \justify
 Cette année, afin de valider l'UE développement mobile 2, nous avons dû réaliser un projet. Ce projet consistait à réaliser une application ou un jeu respectant certaines contraintes:
@@ -46,7 +54,7 @@ De ce fait mon collègue et moi même avons opté pour une application. Après u
 \end{flushleft}
 
 \newpage
-\chapter{L'application Planee}
+\chapter*{L'application Planee}
 \section{Principe}
 \begin{flushleft}
 \justify
@@ -216,7 +224,7 @@ Au cours de ce projet, nous avons rencontré plusieurs problèmes. Nous allons d
 \subsection{Fragments}
 \begin{flushleft}
 \justify
-Au début de ce projet, lors du choix de la première activité, nous avons choisi l'activité "Navigation Drawer Activity".\\
+Au début de ce projet, lors du choix de la première activité, nous avons choisi l'activité "Navigation Drawer Activity".\cite{1}\\
 \center
 \begin{minipage}{0.48\linewidth}
 \includegraphics[width=\linewidth]{Template}
@@ -290,6 +298,16 @@ Pour créer la notification, nous récupérons l'évènement récemment créé g
     \end{subfigure}
     \caption{Problème : Notifications sur 2 évènements}
 \end{figure}
+\justify
+Un autre problème s'est également révélé lors des tests de notification sur Android Studio. En effet selon la version d'Android utilisé, il fallait créer un "channel" manuellement sur lequel la notification serait diffusé. Le message d'erreur suivant s'affichait alors dans le logCat:
+\\
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[scale=0.3]{logCatNotif}
+\captionof{figure}{Message d'erreur LogCat}
+\end{minipage}\\
+Bien évidemment c'est en épluchant le net qu'une réponse nous a été apporté sur le site StackOverflow\cite{2}
 \end{flushleft}
 \subsection{Layout}
 \begin{flushleft}
@@ -298,8 +316,28 @@ Lors de la réalisation du design de l'application nous devions géré en plus d
 Au départ le design de l'application était réalisé entièrement avec des ConstraintLayout. Le problème avec les Constraint Layout est le manque de précision et de rigidité dans les contraintes que nous mettons. De ce fait des éléments qui semblait bien placés se retrouvait déplacés sans aucune intervention de notre part lorsque nous lançons l'application. Nous avons donc pris la décision de remplacer les Constraint Layout par des Relative Layout là où cela posait problème(page détail, page addDétail notamment). Après ce changement nous avons pu convenablement placé les différents éléments sans erreurs apparentes.
 \end{flushleft}
 \section{Amélioration futures}
+Bien que l'application soit fonctionnelle, il y a des améliorations possibles afin de rendre l'application plus attractive, beaucoup plus fonctionnelle mais aussi plus proche de ce à quoi ressemble les applications de nos jours.
+Parmis ces améliorations on pense notamment à:
+\begin{itemize}
+\item[•]Un système de notification fonctionnelle 
+\item[•]un système  de connexion afin de pouvoir stocker des informations dans le cloud 
+\item[•]Adaption de l'application sur écran plus large, plus récent( 18:9 etc...)
+\item[•]Mise en place de l'application sur IOS 
+\item[•]Design plus épuré et plus actuel/professionnel 
+\end{itemize}
+
+ 
 \newpage
-\chapter{Conclusion}
+\chapter*{Conclusion}
+\begin{flushleft}
+\justify
+En conclusion,  nous pouvons dire que nous avons atteint l'objectif que nous nous étions fixé : Créer une application sous Android qui comporte plusieurs écrans, une présentation sous forme de liste et qui garantit une persistance des données de l'utilisateur. Il y a certes encore des améliorations à apporté à l'application afin qu'elle soit "conforme" à ce qu'il se trouve actuellement sur le marché mais le résultat sur le plan technique est déjà plus que satisfaisant.Nous avons également appris à faire l'impasse sur certaines solutions trop compliquées à mettre en place dans le temps imparti et à en favoriser d'autres qui produisent le même résultat, certes pas tout à fait similaire à celui attendu initialement mais qui remplit quand même la fonction attendu.Ce projet nous a également permis d'asseoir nos compétences en matière de communication mais surtout du partage et suivi de travail via l'utilisation de la plateforme Github\cite{3}.
+\end{flushleft}
 \newpage
-\chapter{Bibliographie}
+\begin{thebibliography}{2} 
+   \bibitem[1]{Android} \href{www.android.developper.com}{AndroidDevelopper}, 2019, 
+   \bibitem[2]{Stack} Md Imran Choudhury, Janvier 2020, \href{https://stackoverflow.com/a/16448278}{Réponse StackOverflow}
+    \bibitem[3]{github} \href{www.github.com}{Github}, 2020
+    
+\end{thebibliography} 
 \end{document}

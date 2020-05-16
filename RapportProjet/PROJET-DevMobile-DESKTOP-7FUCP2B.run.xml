@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>PROJET-DevMobile.bcf</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>PROJET-DevMobile.bbl</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -60,23 +60,23 @@
       <file>french.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>PROJET-DevMobile</infile>
+      <infile>PROJET-DevMobile-DESKTOP-7FUCP2B</infile>
     </cmdline>
     <input>
-      <file>PROJET-DevMobile.bcf</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bcf</file>
     </input>
     <output>
-      <file>PROJET-DevMobile.bbl</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>PROJET-DevMobile.bbl</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>PROJET-DevMobile.bcf</file>
+      <file>PROJET-DevMobile-DESKTOP-7FUCP2B.bcf</file>
     </requires>
   </external>
 </requests>
